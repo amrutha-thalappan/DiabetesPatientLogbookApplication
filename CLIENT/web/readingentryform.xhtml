@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+<script src="scripts/jquery.1.12.4.min.js"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
+<script src="scripts/controller.js"></script>
+<div class="container">
+    <h:form>
+        <div>
+            <h1>Enter reading</h1>
+
+            <p:outputLabel for="Date" value="Date: " />
+            <h3>Date</h3>
+            <p:inputText />
+
+            <p:outputLabel for="Day" value="Day: " />
+            <p:inputText />
+
+            <h1>Add reading values and time here:</h1>
+            <button class="addReading">+</button>
+
+            <p:outputLabel for="Time" value="Time: " />
+            <p:inputText />
+
+            <p:outputLabel for="Place" value="Place: " />
+            <p:inputText />
+
+            <p:outputLabel for="ReadingType" value="Reading type: " />
+            <p:selectOneMenu id="readingtype" value="#{dropdownView.country}" style="width:150px">
+                <p:ajax listener="#{dropdownView.onCountryChange}" update="city" />
+                <f:selectItem itemLabel="Select reading type" itemValue="" noSelectionOption="true" />
+                <f:selectItems value="#{dropdownView.countries}" />
+            </p:selectOneMenu>
+
+            <p:commandButton value="Submit" update="msgs" action="#{dropdownView.displayLocation}" icon="pi pi-check" />
+        </div>
+
+    </h:form>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9eff6132-7802-4d57-a412-fd41c6d8de57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_primefaces_primefaces_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/enumtype/ReadingType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/enumtype/TimeOfRecording.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/DiabetesData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/DiabetesDataDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/LoginDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/repository/LoginRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/repository/ReadingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/service/ReadingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/service/ReadingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/welcomePrimefaces.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Swagger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Swagger.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/api/LoginApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/api/LoginApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/api/LoginApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/api/LoginApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/api/ReadingsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/api/ReadingsApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/api/ReadingsApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/api/ReadingsApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/api/UsersApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/api/UsersApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/api/UsersApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/api/UsersApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/Reading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/Reading.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/service/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/service/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/bootstrap/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/bootstrap/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/scripts/controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/scripts/jquery.1.12.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-spring.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/swagger-spring.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/swagger/api/LoginApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/swagger/api/LoginApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/swagger/api/LoginApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/swagger/api/LoginApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/swagger/api/ReadingsApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/swagger/api/ReadingsApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/swagger/api/ReadingsApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/swagger/api/ReadingsApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/swagger/api/UsersApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/swagger/api/UsersApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/swagger/api/UsersApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/swagger/api/UsersApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/swagger/model/Address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/swagger/model/Reading.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/swagger/model/Reading.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/swagger/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/swagger/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/swagger/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/swagger/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/swagger/service/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/swagger/service/LoginService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/swagger/service/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/swagger/service/LoginServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/swagger/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/swagger/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/swagger/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/swagger/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/bootstrap/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/bootstrap/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/scripts/controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/scripts/jquery.1.12.4.min.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="FxmlFile" />
+        <option value="Enum" />
+        <option value="HTML File" />
+        <option value="XHTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ZRiS312zYwOR7ZsBHCMEpXdz0x" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="XHTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CLIENT" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="com.poratu.idea.plugins.tomcat.setting.TomcatSettingConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Amrutha\M1_Sem2_Studies\Web_Services\MiniProject\Project\DIACARE\src\main\webapp" />
+      <recent name="D:\Amrutha\M1_Sem2_Studies\Web_Services\MiniProject\Project\DIACARE\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.swagger.repository" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Amrutha\M1_Sem2_Studies\Web_Services\MiniProject\Project\DIACARE\src\main\resources\templates" />
+      <recent name="D:\Amrutha\M1_Sem2_Studies\Web_Services\MiniProject\Project\DIACARE\src\main\java\io\swagger\utils" />
+      <recent name="D:\Amrutha\M1_Sem2_Studies\Web_Services\MiniProject\Project\DIACARE\src\main\java\io\swagger\service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Swagger2SpringBoot">
+    <configuration name="Swagger2SpringBoot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.swagger.Swagger2SpringBoot" />
+      <module name="swagger-spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.swagger.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Swagger2SpringBoot" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="swagger-spring" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.swagger.Swagger2SpringBoot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Swagger2SpringBoot" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9eff6132-7802-4d57-a412-fd41c6d8de57" name="Default Changelist" comment="" />
+      <created>1584808303294</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584808303294</updated>
+      <workItem from="1586871505052" duration="2157000" />
+      <workItem from="1586879131465" duration="46000" />
+      <workItem from="1586895640774" duration="1329000" />
+      <workItem from="1586949138927" duration="92000" />
+      <workItem from="1586959295851" duration="4121000" />
+      <workItem from="1586980378571" duration="7948000" />
+      <workItem from="1587022350666" duration="1653000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="461" y="242" key="#Tomcat_Server" timestamp="1586875925283">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="461" y="242" key="#Tomcat_Server/0.0.1366.728@0.0.1366.728" timestamp="1586875925283" />
+    <state x="137" y="7" width="1092" height="721" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586858394282">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="7" width="1092" height="721" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586858394282" />
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1586814780805">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586814780805" />
+    <state x="367" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586813418825">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="367" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1586813418825" />
+    <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586814859429">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586814859429" />
+    <state width="701" height="466" key="DebuggerActiveHint" timestamp="1586983869336">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="701" height="466" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1586983869336" />
+    <state x="-135" y="20" width="1182" height="545" key="DiffContextDialog" timestamp="1586770548575">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-135" y="20" width="1182" height="545" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1586770548575" />
+    <state x="463" y="125" key="FileChooserDialogImpl" timestamp="1586985720426">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="125" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586985720426" />
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1586984033250">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586984033250" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1586984033250">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586984033250" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1586984033250">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586984033250" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1586984033250">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586984033250" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1586983923043">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586983923043" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1586983923043">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1586983923043" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1586983923043">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1586983923043" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1586983923043">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586983923043" />
+    <state x="213" y="22" key="Maven.ArtifactSearchDialog" timestamp="1586799099753">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="213" y="22" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1586799099753" />
+    <state x="186" y="9" key="SettingsEditor" timestamp="1586858267270">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586858267270" />
+    <state x="391" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1586870326746">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="391" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586870326746" />
+    <state x="331" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586108872240">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="331" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1586108872240" />
+    <state x="328" y="91" width="710" height="546" key="find.popup" timestamp="1586372378380">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="328" y="91" width="710" height="546" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1586372378380" />
+    <state x="65" y="0" key="new project wizard" timestamp="1586876107229">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1586876107229" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1586768790470">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586768790470" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/service/UserServiceImpl.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/api/LoginApiController.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/service/LoginServiceImpl.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/api/UsersApi.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/service/UserServiceImpl.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/model/LoginDetails.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/model/LoginDetails.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/model/LoginDetails.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/model/LoginDetails.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/model/LoginDetails.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/model/LoginDetails.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/model/LoginDetails.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/model/LoginDetails.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/model/LoginDetails.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/model/LoginDetails.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/model/DiabetesData.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

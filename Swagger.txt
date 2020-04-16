@@ -1,0 +1,540 @@
+openapi: 3.0.0
+info:
+  title: "user-api"
+  version: "1.0"
+  
+paths:
+  /users:
+    get:
+      summary: "Return all users"
+      tags: 
+        - "UserController"
+      description: "Api to return all the users"
+      responses:
+        '200':
+          description: "successful operation. Produces list of users"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+        '400':
+          description: "The specified user ID is invalid (not a number)"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: "No user exists"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        default:
+          description: "Unexpected error"
+  /users/{id}:
+    get:
+      summary: "Return user having given id"
+      tags: 
+        - "UserController"
+      description: "Api to return user having given id"
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: "The ID of the user to return"
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        '200':
+          description: "successful operation.Return a user having given id"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: "The specified user ID is invalid (not a number)"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: "No user exists"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        default:
+          description: "Unexpected error"
+    put:
+      summary: "Update user"
+      tags: 
+        - "UserController"
+      description: "Api to update a user having given id"
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: "The ID of the user to return"
+          schema:
+            type: integer
+            minimum: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: "Updated"
+        '405':
+          description: "Invalid input"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '400':
+          description: "Invalid ID supplied"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: "user not found"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      summary: "delete a user"
+      tags: 
+        - "UserController"
+      description: "Api to delete a user having given id"
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: "The ID of the user to return"
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        '200':
+          description: "Deleted"
+  /users/:
+    post:
+      summary: "Create a new user"
+      tags: 
+        - "UserController"
+      description: "Api to return user having given id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '201':
+          description: "Created"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '405':
+          description: "Invalid input"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      summary: "Delete all user"
+      tags: 
+        - "UserController"
+      description: "Api to delete all user"
+      responses:
+        '200':
+          description: "Deleted"
+  /users/changePassword:
+    put:
+      summary: "Change password user"
+      tags: 
+        - "UserController"
+      description: "Api to update password of the loggedin user"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChangePasswordDto'
+      responses:
+        '200':
+          description: "Password updated"
+        '404':
+          description: "Current password mismatch"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '417':
+          description: "Invalid password format"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '412':
+          description: "Precondition failed. Password mismatch"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+                
+  /login:
+    post:
+      summary: "User login"
+      tags: 
+        - "LoginController"
+      description: "Enables a user to login"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginCredentials'
+      responses:
+        '200':
+          description: "successful operation.Return a user"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: "Bad request"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: "No user exists"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        default:
+          description: "Unexpected error"
+  /forgotpassword:
+    post:
+      summary: "Forgot password"
+      tags: 
+        - "LoginController"
+      description: "Enables user to give emailid to recieve mail to update password"
+      parameters:
+        - name: "email"
+          in: path
+          required: true
+          description: "The email ID of the user to recieve password update mail."
+          schema:
+            type: string
+            minimum: 1
+      responses:
+        '200':
+          description: "successfully sent an email to the user"
+        '400':
+          description: "Bad request"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: "No user exists with given email address"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '417':
+          description: "Email format is wrong"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        default:
+          description: "Unexpected error"
+          
+  /readings/{readingId}:
+    get:
+      summary: "return reading of the logged in user based on the given reading id"
+      tags: 
+        - ReadingController
+      description: "Api to return reading of the logged in user based on the given reading id"
+      parameters:
+        - name: readingId
+          in: path
+          required: true
+          description: "The ID of the reading to return"
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        '200':
+          description: "successful operation.Return a user having given id"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reading'
+        '400':
+          description: "The specified reading ID is invalid"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: "No readng exists"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        default:
+          description: "Unexpected error"
+    put:
+      summary: Update reading
+      tags: 
+        - ReadingController
+      description: "Api to update a reading having given id"
+      parameters:
+        - name: readingId
+          in: path
+          required: true
+          description: "The ID of the reading to return"
+          schema:
+            type: integer
+            minimum: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reading'
+      responses:
+        '200':
+          description: Updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reading'
+        '405':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '400':
+          description: Invalid ID supplied
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: reading not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      summary: "delete a reading of logged in user"
+      tags: 
+        - ReadingController
+      description: "Api to delete a reading having given id of logged in user"
+      parameters:
+        - name: readingId
+          in: path
+          required: true
+          description: "The ID of the reading to delete"
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        '200':
+          description: Deleted
+        '404':
+          description: "reading not found"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /readings/:
+    post:
+      summary: "Save a new reading"
+      tags: 
+        - ReadingController
+      description: "Api to save a new reading having given id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reading'
+      responses:
+        '201':
+          description: "Created"
+        '405':
+          description: "Invalid input"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    get:
+      summary: "Return readings of the given day of logged in user"
+      tags: 
+        - "ReadingController"
+      description: "Api to return all the readngs of the given day of the logged in user"
+      parameters:
+        - name: "userId"
+          in: header
+          required: true
+          description: "The ID of the user whose readings need to be retrieved."
+          schema:
+            type: string
+            minimum: 1
+        - name: "date"
+          in: header
+          required: true
+          description: "The selected date on which day's readings that we have to retrieve"
+          schema:
+            type: string
+            minimum: 1
+      responses:
+        '200':
+          description: "Return all readings of the given day of the given user"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Reading'
+        '400':
+          description: "The given userId or date is invalid"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: "No user exists with given id"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        default:
+          description: "Unexpected error"
+          
+    delete:
+      summary: "Delete all readings"
+      tags: 
+        - ReadingController
+      description: "Api to delete all readings"
+      responses:
+        '200':
+          description: Deleted
+        '404':
+          description: "No reading exists to delete"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /readings/{userId}:
+    get:
+      summary: "Return all readings of the logged in user"
+      tags: 
+        - "ReadingController"
+      description: "Api to return all the readng of the logged in user"
+      parameters:
+        - name: "userId"
+          in: path
+          required: true
+          description: "The ID of the user whose readings need to be retrieved."
+          schema:
+            type: string
+            minimum: 1
+      responses:
+        '200':
+          description: "Return all readings of the given user"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Reading'
+        '400':
+          description: "The given userId is invalid"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: "No user exists"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        default:
+          description: "Unexpected error"
+          
+components:
+  schemas:
+    User:
+      type: "object"
+      properties:
+        firstName:
+          type: "string"
+        lastName:
+          type: "string"
+        contactNumber:
+          type: "string"
+        email:
+          type: "string"
+        userName:
+          type: "string"
+        password:
+          type: "string"
+        address:
+          type: "array"
+          items:
+            $ref: '#/components/schemas/Address'
+    Address:
+      type: "object"
+      properties:
+        city:
+          type: "string"
+        pincode:
+          type: "string"
+    ErrorResponse:
+      type: "object"
+      properties:
+        statuscode:
+          type: "integer"
+        message:
+          type: "string"
+    LoginCredentials:
+      type: "object"
+      properties:
+        username:
+          type: "string"
+        password:
+          type: "string"
+    ChangePasswordDto:
+      type: "object"
+      properties:
+        currentPassword:
+          type: "string"
+        newPassword:
+          type: "string"
+        confirmPassword:
+          type: "string"
+    Reading:
+      type: "object"
+      properties:
+        Date:
+          type: "string"
+        reading:
+          type: "number"

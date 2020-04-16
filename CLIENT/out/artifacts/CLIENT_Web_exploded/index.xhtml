@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<head>
+   <meta charset="UTF-8"/>
+   <title>Login</title>
+   <link rel="stylesheet" href="WEB-INF/bootstrap/bootstrap.min.css" />
+   <link rel="stylesheet" href="WEB-INF/css/app.css"/>
+</head>
+<body>
+<script src="WEB-INF/scripts/jquery.1.12.4.min.js"></script>
+<script src="WEB-INF/bootstrap/bootstrap.min.js"></script>
+<script src="WEB-INF/scripts/controller.js"></script>
+<form onSubmit="loginUser()">
+   <div class="container">
+      <h1>Login</h1>
+
+      <label><b>Username</b></label>
+      <input id="userName" type="text" placeholder="Enter username" name="userName"/>
+
+      <label><b>Password</b></label>
+      <input id="psw" type="password" placeholder="Enter Password" name="psw"/>
+
+      <!--<p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>-->
+      <button type="submit" class="registerbtn">Login</button>
+   </div>
+   <div class="container signin">
+      <p>New user? <a href="http://localhost:63342/swagger-spring/templates/registration.html">Sign in</a>.</p>
+   </div>
+
+</form>
+</body>
+</html>

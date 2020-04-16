@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="CLIENT:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/CLIENT_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="CLIENT" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Mojarra-2.4.0" />
+          <element id="library" level="project" name="PrimeFaces-6.1" />
+          <element id="library" level="project" name="javax.enterprise:cdi-api:2.0" />
+          <element id="library" level="project" name="javax.faces:javax.faces-api:2.1" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="CLIENT/web/Web" />
+      <element id="directory" name="Resources">
+        <element id="dir-copy" path="$USER_HOME$/Downloads/JSF-on-Spring-Boot-master/UnderstandingScopes/src/main/webapp/WEB-INF" />
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/web/resources" />
+    </root>
+  </artifact>
+</component>
