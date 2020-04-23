@@ -11,6 +11,70 @@
 <h1>Hello user</h1>
 <div class="container signin">
     <p>Add reading <a href="http://localhost:8082/CLIENT_war_exploded/readingentryform.xhtml">here</a>.</p>
+    <p:dataTable var="car" value="#{dataDisplayView.dataListDtos}">
+        <p:column headerText="Date">
+            <h:outputText value="#{dataListDto.date}" />
+        </p:column>
+
+        <p:column headerText="Day">
+            <h:outputText value="#{dataListDto.day}" />
+        </p:column>
+
+        <p:column headerText="Night: Insulin before bed">
+            <h:outputText value="#{dataListDto.nightInsulinBeforeBed}" />
+        </p:column>
+
+        <p:column headerText="Night: Sugar at fast">
+            <h:outputText value="#{dataListDto.nightSugarAtFast}" />
+        </p:column>
+
+        <p:column headerText="Morning: Insulin before food">
+            <h:outputText value="#{dataListDto.morningInsulinBeforeFood}" />
+        </p:column>
+        <p:column headerText="Morning: Insulin after food">
+            <h:outputText value="#{dataListDto.morningInsulinAfterFood}" />
+        </p:column>
+        <p:column headerText="Place">
+            <h:outputText value="#{dataListDto.morningPlace}" />
+        </p:column>
+        <p:column headerText="Morning: Sugar before food">
+            <h:outputText value="#{dataListDto.morningSugarBeforeFood}" />
+        </p:column>
+        <p:column headerText="Morning: Sugar after food">
+            <h:outputText value="#{dataListDto.morningSugarAfterFood}" />
+        </p:column>
+        <p:column headerText="Noon: Insulin before food">
+            <h:outputText value="#{dataListDto.noonInsulinBeforeFood}" />
+        </p:column>
+        <p:column headerText="Noon: Insulin after food">
+            <h:outputText value="#{dataListDto.noonInsulinAfterFood}" />
+        </p:column>
+        <p:column headerText="Place">
+            <h:outputText value="#{dataListDto.noonPlace}" />
+        </p:column>
+        <p:column headerText="Noon: Sugar before food">
+            <h:outputText value="#{dataListDto.noonSugarBeforeFood}" />
+        </p:column>
+        <p:column headerText="Noon: Sugar after food">
+            <h:outputText value="#{dataListDto.noonSugarAfterFood}" />
+        </p:column>
+        <p:column headerText="Evening: Insulin before food">
+            <h:outputText value="#{dataListDto.eveningInsulinBeforeFood}" />
+        </p:column>
+        <p:column headerText="Evening: Insulin after food">
+            <h:outputText value="#{dataListDto.eveningInsulinAfterFood}" />
+        </p:column>
+        <p:column headerText="Place">
+            <h:outputText value="#{dataListDto.eveningPlace}" />
+        </p:column>
+        <p:column headerText="Evening: Sugar before food">
+            <h:outputText value="#{dataListDto.eveningSugarBeforeFood}" />
+        </p:column>
+        <p:column headerText="Evening: Sugar after food">
+            <h:outputText value="#{dataListDto.eveningSugarAfterFood}" />
+        </p:column>
+    </p:dataTable>
+
 </div>
 </body>
 </html>

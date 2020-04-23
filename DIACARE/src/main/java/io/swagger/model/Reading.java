@@ -1,6 +1,8 @@
 package io.swagger.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.enumtype.DayTime;
+import io.swagger.enumtype.NightChecking;
 import io.swagger.enumtype.ReadingType;
 import io.swagger.enumtype.TimeOfRecording;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -40,17 +42,17 @@ public class Reading {
     @Column(name = "readingType")
     private ReadingType readingType;
 
+    @JsonProperty("dayTime")
+    @Column(name = "dayTime")
+    private DayTime dayTime;
+
     @JsonProperty("timeOfRecording")
     @Column(name = "timeOfRecording")
     private TimeOfRecording timeOfRecording;
 
-    @JsonProperty("isBeforeBed")
-    @Column(name = "isBeforeBed")
-    private Boolean isBeforeBed = Boolean.FALSE;
-
-    @JsonProperty("isSugarAtFast")
-    @Column(name = "isSugarAtFast")
-    private Boolean isSugarAtFast = Boolean.FALSE;
+    @JsonProperty("nightChecking")
+    @Column(name = "nightChecking")
+    private NightChecking nightChecking;
 
     public Integer getId() {
         return id;
@@ -100,6 +102,14 @@ public class Reading {
         this.readingType = readingType;
     }
 
+    public DayTime getDayTime() {
+        return dayTime;
+    }
+
+    public void setDayTime(DayTime dayTime) {
+        this.dayTime = dayTime;
+    }
+
     public TimeOfRecording getTimeOfRecording() {
         return timeOfRecording;
     }
@@ -108,19 +118,11 @@ public class Reading {
         this.timeOfRecording = timeOfRecording;
     }
 
-    public Boolean getBeforeBed() {
-        return isBeforeBed;
+    public NightChecking getNightChecking() {
+        return nightChecking;
     }
 
-    public void setBeforeBed(Boolean beforeBed) {
-        isBeforeBed = beforeBed;
-    }
-
-    public Boolean getSugarAtFast() {
-        return isSugarAtFast;
-    }
-
-    public void setSugarAtFast(Boolean sugarAtFast) {
-        isSugarAtFast = sugarAtFast;
+    public void setNightChecking(NightChecking nightChecking) {
+        this.nightChecking = nightChecking;
     }
 }

@@ -63,3 +63,7 @@ var loginCredentials = {
      // here we will handle errors and validation messages
    });
 }
+
+function closeAddPopup() {
+
+}

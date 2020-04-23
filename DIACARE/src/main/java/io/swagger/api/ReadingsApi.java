@@ -5,6 +5,7 @@
  */
 package io.swagger.api;
 
+import io.swagger.model.DataListDto;
 import io.swagger.model.ErrorResponse;
 import io.swagger.model.DiabetesData;
 import io.swagger.annotations.*;
@@ -43,8 +44,7 @@ public interface ReadingsApi {
     @RequestMapping(value = "/readings/",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
-    ResponseEntity<List<DiabetesData>> readingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestHeader(value="userId", required=true) String userId
-, @ApiParam(value = "The selected date on which day's readings that we have to retrieve" ,required=true) @RequestHeader(value="date", required=true) String date
+    ResponseEntity<List<DataListDto>> readingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestHeader(value="userId", required=true) Integer userId
 );
 
 

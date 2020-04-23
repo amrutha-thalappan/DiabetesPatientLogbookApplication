@@ -1,5 +1,6 @@
 package io.swagger.api;
 
+import io.swagger.model.DataListDto;
 import io.swagger.model.DiabetesData;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.*;
@@ -45,24 +46,20 @@ public class ReadingsApiController implements ReadingsApi {
         return new ResponseEntity<Void>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<List<DiabetesData>> readingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestHeader(value="userId", required=true) String userId
-, @ApiParam(value = "The selected date on which day's readings that we have to retrieve" ,required=true) @RequestHeader(value="date", required=true) String date
+    public ResponseEntity<List<DataListDto>> readingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestHeader(value="userId", required=true) Integer userId
 ) {
-        String accept = request.getHeader("Accept");
-        if (accept != null && accept.contains("application/json")) {
-            try {
-                return new ResponseEntity<List<DiabetesData>>(objectMapper.readValue("[ {\n  \"reading\" : 0.8008281904610115,\n  \"Date\" : \"Date\"\n}, {\n  \"reading\" : 0.8008281904610115,\n  \"Date\" : \"Date\"\n} ]", List.class), HttpStatus.NOT_IMPLEMENTED);
-            } catch (IOException e) {
-                log.error("Couldn't serialize response for content type application/json", e);
-                return new ResponseEntity<List<DiabetesData>>(HttpStatus.INTERNAL_SERVER_ERROR);
-            }
+        List<DataListDto> diabetesDataDtos = null;
+        try {
+            diabetesDataDtos = readingService.findReadingsOflastWeek(userId);
+            return new ResponseEntity<List<DataListDto>>(diabetesDataDtos, HttpStatus.OK);
+        } catch (Exception e) {
+            log.error("Couldn't serialize response for content type application/json", e);
+            return new ResponseEntity<List<DataListDto>>(diabetesDataDtos, HttpStatus.EXPECTATION_FAILED);
         }
-        return new ResponseEntity<List<DiabetesData>>(HttpStatus.NOT_IMPLEMENTED);
     }
 
     public ResponseEntity<DiabetesData> readingsPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody DiabetesDataDto body
 ) {
-        String accept = request.getHeader("Accept");
         DiabetesData diabetesData = readingService.saveReading(body);
         return new ResponseEntity<DiabetesData>(diabetesData, HttpStatus.OK);
     }

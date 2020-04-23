@@ -77,4 +77,12 @@ public class DiabetesData {
   public void setDay(String day) {
     this.day = day;
   }
+
+  public List<Reading> getReadings() {
+    return readings;
+  }
+
+  public void setReadings(List<Reading> readings) {
+    this.readings = readings;
+  }
 }

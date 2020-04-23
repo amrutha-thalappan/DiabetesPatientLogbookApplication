@@ -3,7 +3,16 @@
 /* Add padding to containers */
 .container {
   padding: 16px;
-  width: 30%
+}
+
+.mainform {
+  padding: 16px;
+  width: 30%;
+}
+
+.readingform{
+  padding: 10px;
+  width: 80%;
 }
 
 /* Full-width input fields */
