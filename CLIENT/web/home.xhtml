@@ -11,7 +11,7 @@
 <h1>Hello user</h1>
 <div class="container signin">
     <p>Add reading <a href="http://localhost:8082/CLIENT_war_exploded/readingentryform.xhtml">here</a>.</p>
-    <p:dataTable var="car" value="#{dataDisplayView.dataListDtos}">
+    <p:dataTable var="dataListDto" value="#{dataDisplayView.dataListDtos}">
         <p:column headerText="Date">
             <h:outputText value="#{dataListDto.date}" />
         </p:column>

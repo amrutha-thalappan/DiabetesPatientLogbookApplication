@@ -15,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -46,7 +47,7 @@ public class ReadingsApiController implements ReadingsApi {
         return new ResponseEntity<Void>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<List<DataListDto>> readingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestHeader(value="userId", required=true) Integer userId
+    public ResponseEntity<List<DataListDto>> readingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestParam(value="userId", required=true) Integer userId
 ) {
         List<DataListDto> diabetesDataDtos = null;
         try {

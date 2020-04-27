@@ -34,10 +34,10 @@ var userDetails = {
 
 function loginUser() {
     event.preventDefault();
-var loginCredentials = {
-                    'username': $("#userName").val(),
-                    'password': $("#psw").val()
-                    }
+    var loginCredentials = {
+                        'username': $("#userName").val(),
+                        'password': $("#psw").val()
+                        }
    $.ajax({
        type: "POST",
        cache: false,

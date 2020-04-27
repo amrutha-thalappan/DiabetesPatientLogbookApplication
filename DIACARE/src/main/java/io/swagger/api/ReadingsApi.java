@@ -11,17 +11,14 @@ import io.swagger.model.DiabetesData;
 import io.swagger.annotations.*;
 import io.swagger.model.DiabetesDataDto;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.util.List;
 
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-21T16:30:27.879Z[GMT]")
+@CrossOrigin(origins = "http://localhost:8082", maxAge = 3600)
 @Api(value = "readings", description = "the readings API")
 public interface ReadingsApi {
 
@@ -41,10 +38,10 @@ public interface ReadingsApi {
         @ApiResponse(code = 400, message = "The given userId or date is invalid", response = ErrorResponse.class),
         @ApiResponse(code = 404, message = "No user exists with given id", response = ErrorResponse.class),
         @ApiResponse(code = 200, message = "Unexpected error") })
-    @RequestMapping(value = "/readings/",
+    @RequestMapping(value = "/readings/weekreadings",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
-    ResponseEntity<List<DataListDto>> readingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestHeader(value="userId", required=true) Integer userId
+    ResponseEntity<List<DataListDto>> readingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestParam(value="userId", required=true) Integer userId
 );
 
 

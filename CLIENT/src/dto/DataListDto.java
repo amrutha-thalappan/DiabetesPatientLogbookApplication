@@ -1,9 +1,12 @@
 package dto;
 
+import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
-public class DataListDto {
+public class DataListDto implements Serializable {
 
+    private Integer userId;
     private String date;
     private String day;
     private String nightInsulinBeforeBed;
@@ -23,6 +26,14 @@ public class DataListDto {
     private String eveningPlace;
     private String eveningSugarBeforeFood;
     private String eveningSugarAfterFood;
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
 
     public String getDate() {
         return date;
