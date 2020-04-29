@@ -1,3 +1,5 @@
+var userId;
+
 function registerUser() {
     event.preventDefault();
 var userDetails = {
@@ -25,7 +27,8 @@ var userDetails = {
    })
    // using the done promise callback
    .done(function (data) {
-
+       userId = data[0].userId;
+       System.out.println(userId);
        // log data to the console so we can see
        console.log(data);
      // here we will handle errors and validation messages

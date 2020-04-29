@@ -15,8 +15,13 @@
     <h:form>
         <div class="readingform">
             <h3>Enter reading</h3>
+
             <p:outputLabel value="Date: " />
-            <p:inputText value="#{readingView.date}"/>
+            <p:inputText value="#{readingView.date}"/>    <!--refrence-->
+
+          <!--  <p:outputLabel value="Date: " />
+            <p:inputText/> -->
+
             <p:outputLabel value="Day: " />
             <p:inputText value="#{readingView.day}" />
         </div>
@@ -32,8 +37,15 @@
 
             <p:dialog header="Add reading here" widgetVar="dlg" resizable="false">
                 <h:panelGrid columns="2" cellpadding="5">
-                    <p:outputLabel value="Time: " />
-                    <p:inputText value="#{readingView.time}" />
+
+
+                    <p:outputLabel value="Time: " />       <!-- textfield label creation-->
+                    <p:inputText value="#{readingView.time}" />       <!-- textfield creation : no need to put value : example in next line-->
+
+                    <!-- <p:outputLabel value="Time: " />
+                    <p:inputText" />   -->
+
+
                     <p:outputLabel value="Place: " />
                     <p:inputText value="#{readingView.place}"/>
                     <p:outputLabel value="Reading Type: " />
