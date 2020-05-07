@@ -5,17 +5,17 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-21T16:30:27.879Z[GMT]")
 @Entity
-@EntityListeners(AuditingEntityListener.class)
 @Table(name = "LoginDetails")
-public class LoginDetails {
+public class LoginDetails implements Serializable {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name = "id", updatable = false, nullable = false)
+    @GeneratedValue(strategy= GenerationType.IDENTITY) // Autoincrement
+    @Column(name = "id", updatable = false, nullable = false) /// column name
     private Integer id;
 
     @OneToOne(fetch = FetchType.LAZY, optional = false)

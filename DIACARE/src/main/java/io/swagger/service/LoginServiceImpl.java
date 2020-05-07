@@ -16,8 +16,9 @@ public class LoginServiceImpl implements LoginService {
     @Autowired
     UserService userService;
 
+
     @Override
-    public void saveLoginDetails(LoginDetails loginDetails) {
+    public void saveLoginDetails(LoginDetails loginDetails)    {
         loginRepository.save(loginDetails);
     }
 
@@ -32,5 +33,4 @@ public class LoginServiceImpl implements LoginService {
         }
         return user;
     }
-
 }

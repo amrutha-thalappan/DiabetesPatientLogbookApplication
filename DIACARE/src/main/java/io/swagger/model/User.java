@@ -1,8 +1,11 @@
 package io.swagger.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.ApiModelProperty;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -16,6 +19,7 @@ import javax.validation.Valid;
  */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-21T16:30:27.879Z[GMT]")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "UserDetails")
@@ -40,7 +44,6 @@ public class User implements Serializable {
 
   @Column(name = "email")
   private String email = null;
-
 
   public User userId(Integer userId) {
     this.userId = userId;
@@ -157,7 +160,6 @@ public class User implements Serializable {
   public void setId(Integer id) {
     this.id = id;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

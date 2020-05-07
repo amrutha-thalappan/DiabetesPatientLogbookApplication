@@ -1,152 +1,58 @@
-package io.swagger.model;
+package dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-import org.springframework.validation.annotation.Validated;
-
-import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Date;
 
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-21T16:30:27.879Z[GMT]")
-@Entity
-@EntityListeners(AuditingEntityListener.class)
-@Table(name = "Readings")
-public class ReadingDetails implements Serializable {
+public class ReadingDetailsDto {
 
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name = "id", updatable = false, nullable = false)
-    private Integer id;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "userId", nullable = false)
-    private User user;
-
-    @Column(name = "date")
-    private Date date;
-
-    @Column(name = "day")
+    private Integer userId;
+    private String date;
     private String day;
-
-    @Column(name = "insulinBeforeBed")
     private Integer insulinBeforeBed;
-
-    @Column(name = "insulinBeforeBedTime")
     private String insulinBeforeBedTime;
-
-    @Column(name = "SugarAtFast")
-    private Integer SugarAtFast;
-
-    @Column(name = "SugarAtFastTime")
-    private String SugarAtFastTime;
-
-    @Column(name = "mrngInsulinBeforeFood")
+    private Integer sugarAtFast;
+    private String sugarAtFastTime;
     private Integer mrngInsulinBeforeFood;
-
-    @Column(name = "mrngInsulinBeforeFoodTime")
     private String mrngInsulinBeforeFoodTime;
-
-    @Column(name = "mrngInsulinAfterFood")
     private Integer mrngInsulinAfterFood;
-
-    @Column(name = "mrngInsulinAfterFoodTime")
     private String mrngInsulinAfterFoodTime;
-
-    @Column(name = "mrngPlace")
     private String mrngPlace;
-
-    @Column(name = "mrngSugarBeforeFood")
     private Integer mrngSugarBeforeFood;
-
-    @Column(name = "mrngSugarBeforeFoodTime")
     private String mrngSugarBeforeFoodTime;
-
-    @Column(name = "mrngSugarAfterFood")
     private Integer mrngSugarAfterFood;
-
-    @Column(name = "mrngSugarAfterFoodTime")
     private String mrngSugarAfterFoodTime;
-
-    @Column(name = "noonInsulinBeforeFood")
     private Integer noonInsulinBeforeFood;
-
-    @Column(name = "noonInsulinBeforeFoodTime")
     private String noonInsulinBeforeFoodTime;
-
-    @Column(name = "noonInsulinAfterFood")
     private Integer noonInsulinAfterFood;
-
-    @Column(name = "noonInsulinAfterFoodTime")
     private String noonInsulinAfterFoodTime;
-
-    @Column(name = "noonPlace")
     private String noonPlace;
-
-    @Column(name = "noonSugarBeforeFood")
     private Integer noonSugarBeforeFood;
-
-    @Column(name = "noonSugarBeforeFoodTime")
     private String noonSugarBeforeFoodTime;
-
-    @Column(name = "noonSugarAfterFood")
     private Integer noonSugarAfterFood;
-
-    @Column(name = "noonSugarAfterFoodTime")
     private String noonSugarAfterFoodTime;
-
-    @Column(name = "evngInsulinBeforeFood")
     private Integer evngInsulinBeforeFood;
-
-    @Column(name = "evngInsulinBeforeFoodTime")
     private String evngInsulinBeforeFoodTime;
-
-    @Column(name = "evngInsulinAfterFood")
     private Integer evngInsulinAfterFood;
-
-    @Column(name = "evngInsulinAfterFoodTime")
     private String evngInsulinAfterFoodTime;
-
-    @Column(name = "evngPlace")
     private String evngPlace;
-
-    @Column(name = "evngSugarBeforeFood")
     private Integer evngSugarBeforeFood;
-
-    @Column(name = "evngSugarBeforeFoodTime")
     private String evngSugarBeforeFoodTime;
-
-    @Column(name = "evngSugarAfterFood")
     private Integer evngSugarAfterFood;
-
-    @Column(name = "evngSugarAfterFoodTime")
     private String evngSugarAfterFoodTime;
-
-    @Column(name = "comment")
     private String comment;
 
-    public Integer getId() {
-        return id;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -175,19 +81,19 @@ public class ReadingDetails implements Serializable {
     }
 
     public Integer getSugarAtFast() {
-        return SugarAtFast;
+        return sugarAtFast;
     }
 
     public void setSugarAtFast(Integer sugarAtFast) {
-        SugarAtFast = sugarAtFast;
+        this.sugarAtFast = sugarAtFast;
     }
 
     public String getSugarAtFastTime() {
-        return SugarAtFastTime;
+        return sugarAtFastTime;
     }
 
     public void setSugarAtFastTime(String sugarAtFastTime) {
-        SugarAtFastTime = sugarAtFastTime;
+        this.sugarAtFastTime = sugarAtFastTime;
     }
 
     public Integer getMrngInsulinBeforeFood() {

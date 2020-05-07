@@ -1,6 +1,7 @@
 package view;
 
 import dto.DataListDto;
+import dto.ReadingDetailsDto;
 import service.DataListService;
 
 import javax.annotation.PostConstruct;
@@ -16,25 +17,25 @@ import java.util.List;
 @ViewScoped
 public class DataDisplayView implements Serializable {
 
-    private List<DataListDto> dataListDtos;
+    private List<ReadingDetailsDto> readingDetailsDtos;
 
     @ManagedProperty(value="#{dataListService}")
     private DataListService dataListService;
 
     @PostConstruct
     public void init() {
-        dataListDtos = dataListService.getWeekReadings();
+        readingDetailsDtos = dataListService.getWeekReadings();
     }
 
     public void setDataListService(DataListService dataListService) {
         this.dataListService = dataListService;
     }
 
-    public List<DataListDto> getDataListDtos() {
-        return dataListDtos;
+    public List<ReadingDetailsDto> getReadingDetailsDtos() {
+        return readingDetailsDtos;
     }
 
-    public void setDataListDtos(List<DataListDto> dataListDtos) {
-        this.dataListDtos = dataListDtos;
+    public void setReadingDetailsDtos(List<ReadingDetailsDto> readingDetailsDtos) {
+        this.readingDetailsDtos = readingDetailsDtos;
     }
 }

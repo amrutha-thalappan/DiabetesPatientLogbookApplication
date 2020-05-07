@@ -1,8 +1,6 @@
 package io.swagger.service;
 
-import io.swagger.model.DataListDto;
-import io.swagger.model.DiabetesData;
-import io.swagger.model.DiabetesDataDto;
+import io.swagger.model.*;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +8,11 @@ import java.util.List;
 @Service
 public interface ReadingService {
 
-    public DiabetesData saveReading(DiabetesDataDto diabetesDataDto);
+    public ReadingDetails saveReading(ReadingDetailsDto readingDetailsDto);
 
-    List<DataListDto> findReadingsOflastWeek(Integer userId);
+    public List<ReadingDetailsDto> findReadingsOflastWeek(Integer userId);
+
+    public ReadingDetails findByReadingId(Integer readingId);
+
+    ReadingDetails updateReading(Integer readingId, ReadingDetailsDto body);
 }

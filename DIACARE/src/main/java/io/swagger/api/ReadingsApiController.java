@@ -1,10 +1,8 @@
 package io.swagger.api;
 
-import io.swagger.model.DataListDto;
-import io.swagger.model.DiabetesData;
+import io.swagger.model.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.*;
-import io.swagger.model.DiabetesDataDto;
 import io.swagger.service.ReadingService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,22 +45,22 @@ public class ReadingsApiController implements ReadingsApi {
         return new ResponseEntity<Void>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<List<DataListDto>> readingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestParam(value="userId", required=true) Integer userId
+    public ResponseEntity<List<ReadingDetailsDto>> readingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestParam(value="userId", required=true) Integer userId
 ) {
-        List<DataListDto> diabetesDataDtos = null;
+        List<ReadingDetailsDto> readingDetailsDtos = null;
         try {
-            diabetesDataDtos = readingService.findReadingsOflastWeek(userId);
-            return new ResponseEntity<List<DataListDto>>(diabetesDataDtos, HttpStatus.OK);
+            readingDetailsDtos = readingService.findReadingsOflastWeek(userId);
+            return new ResponseEntity<List<ReadingDetailsDto>>(readingDetailsDtos, HttpStatus.OK);
         } catch (Exception e) {
             log.error("Couldn't serialize response for content type application/json", e);
-            return new ResponseEntity<List<DataListDto>>(diabetesDataDtos, HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<List<ReadingDetailsDto>>(readingDetailsDtos, HttpStatus.EXPECTATION_FAILED);
         }
     }
 
-    public ResponseEntity<DiabetesData> readingsPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody DiabetesDataDto body
+    public ResponseEntity<ReadingDetails> readingsPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody ReadingDetailsDto body
 ) {
-        DiabetesData diabetesData = readingService.saveReading(body);
-        return new ResponseEntity<DiabetesData>(diabetesData, HttpStatus.OK);
+        ReadingDetails readingDetails = readingService.saveReading(body);
+        return new ResponseEntity<ReadingDetails>(readingDetails, HttpStatus.OK);
     }
 
     public ResponseEntity<Void> readingsReadingIdDelete(@Min(1)@ApiParam(value = "The ID of the reading to delete",required=true, allowableValues="") @PathVariable("readingId") Integer readingId
@@ -71,50 +69,16 @@ public class ReadingsApiController implements ReadingsApi {
         return new ResponseEntity<Void>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<DiabetesData> readingsReadingIdGet(@Min(1)@ApiParam(value = "The ID of the reading to return",required=true, allowableValues="") @PathVariable("readingId") Integer readingId
+    public ResponseEntity<ReadingDetails> readingsReadingIdGet(@Min(1)@ApiParam(value = "The ID of the reading to return",required=true, allowableValues="") @PathVariable("readingId") Integer readingId
 ) {
-        String accept = request.getHeader("Accept");
-        if (accept != null && accept.contains("application/json")) {
-            try {
-                return new ResponseEntity<DiabetesData>(objectMapper.readValue("{\n  \"reading\" : 0.8008281904610115,\n  \"Date\" : \"Date\"\n}", DiabetesData.class), HttpStatus.NOT_IMPLEMENTED);
-            } catch (IOException e) {
-                log.error("Couldn't serialize response for content type application/json", e);
-                return new ResponseEntity<DiabetesData>(HttpStatus.INTERNAL_SERVER_ERROR);
-            }
-        }
-
-        return new ResponseEntity<DiabetesData>(HttpStatus.NOT_IMPLEMENTED);
+        ReadingDetails readingDetails = readingService.findByReadingId(readingId);
+        return new ResponseEntity<ReadingDetails>(readingDetails, HttpStatus.OK);
     }
 
-    public ResponseEntity<DiabetesData> readingsReadingIdPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody DiabetesData body
+    public ResponseEntity<ReadingDetails> readingsReadingIdPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody ReadingDetailsDto body
 , @Min(1)@ApiParam(value = "The ID of the reading to return",required=true, allowableValues="") @PathVariable("readingId") Integer readingId
 ) {
-        String accept = request.getHeader("Accept");
-        if (accept != null && accept.contains("application/json")) {
-            try {
-                return new ResponseEntity<DiabetesData>(objectMapper.readValue("{\n  \"reading\" : 0.8008281904610115,\n  \"Date\" : \"Date\"\n}", DiabetesData.class), HttpStatus.NOT_IMPLEMENTED);
-            } catch (IOException e) {
-                log.error("Couldn't serialize response for content type application/json", e);
-                return new ResponseEntity<DiabetesData>(HttpStatus.INTERNAL_SERVER_ERROR);
-            }
-        }
-
-        return new ResponseEntity<DiabetesData>(HttpStatus.NOT_IMPLEMENTED);
+        ReadingDetails updatedReadingDetails = readingService.updateReading(readingId, body);
+        return new ResponseEntity<ReadingDetails>(updatedReadingDetails, HttpStatus.OK);
     }
-
-    public ResponseEntity<List<DiabetesData>> readingsUserIdGet(@DecimalMin("1")@ApiParam(value = "The ID of the user whose readings need to be retrieved.",required=true) @PathVariable("userId") String userId
-) {
-        String accept = request.getHeader("Accept");
-        if (accept != null && accept.contains("application/json")) {
-            try {
-                return new ResponseEntity<List<DiabetesData>>(objectMapper.readValue("[ {\n  \"reading\" : 0.8008281904610115,\n  \"Date\" : \"Date\"\n}, {\n  \"reading\" : 0.8008281904610115,\n  \"Date\" : \"Date\"\n} ]", List.class), HttpStatus.NOT_IMPLEMENTED);
-            } catch (IOException e) {
-                log.error("Couldn't serialize response for content type application/json", e);
-                return new ResponseEntity<List<DiabetesData>>(HttpStatus.INTERNAL_SERVER_ERROR);
-            }
-        }
-
-        return new ResponseEntity<List<DiabetesData>>(HttpStatus.NOT_IMPLEMENTED);
-    }
-
 }

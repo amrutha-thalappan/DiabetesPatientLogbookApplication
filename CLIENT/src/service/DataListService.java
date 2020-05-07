@@ -3,6 +3,7 @@ package service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dto.DataListDto;
+import dto.ReadingDetailsDto;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.SessionScoped;
@@ -22,15 +23,15 @@ import java.util.List;
 @ApplicationScoped
 public class DataListService implements Serializable {
 
-    public List<DataListDto> getWeekReadings(){
+    public List<ReadingDetailsDto> getWeekReadings(){
 
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target("http://localhost:8080/readings/weekreadings")
                 .queryParam("userId", 1);
         Invocation.Builder invocationBuilder = target.request();
         Response response = invocationBuilder.get();
-        List<DataListDto> dataListDtos = response.readEntity(new GenericType<List<DataListDto>>() {});
-        return  dataListDtos;
+        List<ReadingDetailsDto> readingDetailsDtos = response.readEntity(new GenericType<List<ReadingDetailsDto>>() {});
+        return  readingDetailsDtos;
     }
 
 }

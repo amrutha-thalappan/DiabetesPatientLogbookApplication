@@ -11,4 +11,5 @@ public interface LoginRepository extends JpaRepository<LoginDetails, Integer> {
 
     public LoginDetails findByUserNameAndPassword(String userName, String password);
 
+
 }

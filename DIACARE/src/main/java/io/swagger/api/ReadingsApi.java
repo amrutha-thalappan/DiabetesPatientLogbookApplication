@@ -5,11 +5,8 @@
  */
 package io.swagger.api;
 
-import io.swagger.model.DataListDto;
-import io.swagger.model.ErrorResponse;
-import io.swagger.model.DiabetesData;
+import io.swagger.model.*;
 import io.swagger.annotations.*;
-import io.swagger.model.DiabetesDataDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,16 +29,16 @@ public interface ReadingsApi {
     ResponseEntity<Void> readingsDelete();
 
 
-    @ApiOperation(value = "Return readings of the given day of logged in user", nickname = "readingsGet", notes = "Api to return all the readngs of the given day of the logged in user", response = DiabetesData.class, responseContainer = "List", tags={ "ReadingController", })
+    @ApiOperation(value = "Return readings of the last week of logged in user", nickname = "readingsGet", notes = "Api to return all the readngs of the last week of the logged in user", response = ReadingDetailsDto.class, responseContainer = "List", tags={ "ReadingController", })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "Return all readings of the given day of the given user", response = DiabetesData.class, responseContainer = "List"),
+        @ApiResponse(code = 200, message = "Return all readings of the given day of the given user", response = ReadingDetailsDto.class, responseContainer = "List"),
         @ApiResponse(code = 400, message = "The given userId or date is invalid", response = ErrorResponse.class),
         @ApiResponse(code = 404, message = "No user exists with given id", response = ErrorResponse.class),
         @ApiResponse(code = 200, message = "Unexpected error") })
     @RequestMapping(value = "/readings/weekreadings",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
-    ResponseEntity<List<DataListDto>> readingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestParam(value="userId", required=true) Integer userId
+    ResponseEntity<List<ReadingDetailsDto>> readingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestParam(value="userId", required=true) Integer userId
 );
 
 
@@ -53,7 +50,7 @@ public interface ReadingsApi {
         produces = { "application/json" }, 
         consumes = { "application/json" },
         method = RequestMethod.POST)
-    ResponseEntity<DiabetesData> readingsPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody DiabetesDataDto body
+    ResponseEntity<ReadingDetails> readingsPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody ReadingDetailsDto body
 );
 
 
@@ -68,22 +65,22 @@ public interface ReadingsApi {
 );
 
 
-    @ApiOperation(value = "return reading of the logged in user based on the given reading id", nickname = "readingsReadingIdGet", notes = "Api to return reading of the logged in user based on the given reading id", response = DiabetesData.class, tags={ "ReadingController", })
+    @ApiOperation(value = "return reading of the logged in user based on the given reading id", nickname = "readingsReadingIdGet", notes = "Api to return reading of the logged in user based on the given reading id", response = ReadingDetailsDto.class, tags={ "ReadingController", })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "successful operation.Return a user having given id", response = DiabetesData.class),
+        @ApiResponse(code = 200, message = "successful operation.Return a user having given id", response = ReadingDetails.class),
         @ApiResponse(code = 400, message = "The specified reading ID is invalid", response = ErrorResponse.class),
         @ApiResponse(code = 404, message = "No readng exists", response = ErrorResponse.class),
         @ApiResponse(code = 200, message = "Unexpected error") })
     @RequestMapping(value = "/readings/{readingId}",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
-    ResponseEntity<DiabetesData> readingsReadingIdGet(@Min(1)@ApiParam(value = "The ID of the reading to return",required=true, allowableValues="") @PathVariable("readingId") Integer readingId
+    ResponseEntity<ReadingDetails> readingsReadingIdGet(@Min(1)@ApiParam(value = "The ID of the reading to return",required=true, allowableValues="") @PathVariable("readingId") Integer readingId
 );
 
 
-    @ApiOperation(value = "Update reading", nickname = "readingsReadingIdPut", notes = "Api to update a reading having given id", response = DiabetesData.class, tags={ "ReadingController", })
+    @ApiOperation(value = "Update reading", nickname = "readingsReadingIdPut", notes = "Api to update a reading having given id", response = ReadingDetails.class, tags={ "ReadingController", })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "Updated", response = DiabetesData.class),
+        @ApiResponse(code = 200, message = "Updated", response = ReadingDetails.class),
         @ApiResponse(code = 400, message = "Invalid ID supplied", response = ErrorResponse.class),
         @ApiResponse(code = 404, message = "reading not found", response = ErrorResponse.class),
         @ApiResponse(code = 405, message = "Invalid input", response = ErrorResponse.class) })
@@ -91,21 +88,9 @@ public interface ReadingsApi {
         produces = { "application/json" }, 
         consumes = { "application/json" },
         method = RequestMethod.PUT)
-    ResponseEntity<DiabetesData> readingsReadingIdPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody DiabetesData body
+    ResponseEntity<ReadingDetails> readingsReadingIdPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody ReadingDetailsDto body
 , @Min(1)@ApiParam(value = "The ID of the reading to return",required=true, allowableValues="") @PathVariable("readingId") Integer readingId
 );
 
-
-    @ApiOperation(value = "Return all readings of the logged in user", nickname = "readingsUserIdGet", notes = "Api to return all the readng of the logged in user", response = DiabetesData.class, responseContainer = "List", tags={ "ReadingController", })
-    @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "Return all readings of the given user", response = DiabetesData.class, responseContainer = "List"),
-        @ApiResponse(code = 400, message = "The given userId is invalid", response = ErrorResponse.class),
-        @ApiResponse(code = 404, message = "No user exists", response = ErrorResponse.class),
-        @ApiResponse(code = 200, message = "Unexpected error") })
-    @RequestMapping(value = "/readings/{userId}",
-        produces = { "application/json" }, 
-        method = RequestMethod.GET)
-    ResponseEntity<List<DiabetesData>> readingsUserIdGet(@DecimalMin("1")@ApiParam(value = "The ID of the user whose readings need to be retrieved.",required=true) @PathVariable("userId") String userId
-);
 
 }
