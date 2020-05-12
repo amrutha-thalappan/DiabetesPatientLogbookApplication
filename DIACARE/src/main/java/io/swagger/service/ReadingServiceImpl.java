@@ -24,27 +24,6 @@ public class ReadingServiceImpl implements ReadingService {
         ReadingDetails readingDetails = mapDtoToObject(readingDetailsDto);
         readingDetailsRepository.save(readingDetails);
         return readingDetails;
-        /*DiabetesData diabetesData = new DiabetesData();
-        diabetesData.setUserId(userService.findByUserId(diabetesDataDto.getUserId()));
-        diabetesData.setDate(diabetesDataDto.getDate());
-        diabetesData.setDay(diabetesDataDto.getDay());
-        diabetesDataRepository.save(diabetesData);
-
-        List<Reading> readingList = new ArrayList<>();
-        for (ReadingDto dto: diabetesDataDto.getReadings()){
-            Reading reading = new Reading();
-            reading.setNightChecking(dto.getNightChecking());
-            reading.setTime(dto.getTime());
-            reading.setPlace(dto.getPlace());
-            reading.setReadingType(dto.getReadingType());
-            reading.setDayTime(dto.getDayTime());
-            reading.setTimeOfRecording(dto.getTimeOfRecording());
-            reading.setReading(dto.getReading());
-            reading.setDiabetesData(diabetesData);
-            readingRepository.save(reading);
-            readingList.add(reading);
-        }
-        return diabetesData;*/
     }
 
     @Override
@@ -90,11 +69,39 @@ public class ReadingServiceImpl implements ReadingService {
     }
 
     @Override
-    public ReadingDetails updateReading(Integer readingId, ReadingDetailsDto dto) {
-        ReadingDetails existingReadingDetails = findByReadingId(readingId);
+    public ReadingDetails updateReading(ReadingDetailsDto dto) {
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        Date today = null;
+        try {
+            today = formatter.parse(dto.getDate());
+            if(today == null){
+                today = formatter.parse(formatter.format(new Date()));
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }        
+        ReadingDetails existingReadingDetails = readingDetailsRepository.findByUserIdAndDate(dto.getUserId(), today);
         ReadingDetails updatedReadings = updateDetailsIfNotNull(existingReadingDetails, dto);
         readingDetailsRepository.saveAndFlush(updatedReadings);
         return updatedReadings;
+    }
+
+    @Override
+    public ReadingDetailsDto findTodaysReading(Integer userId) {
+        User user =  userService.findByUserId(userId);
+        ReadingDetails readingDetails = null;
+        Date now = null;
+        SimpleDateFormat formatter = new SimpleDateFormat(
+                "dd-MM-yyyy");
+        try {
+            now = formatter.parse(formatter.format(new Date()));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        readingDetails = readingDetailsRepository.findByUserIdAndDate(userId, now);
+        ReadingDetailsDto readingDetailsDto = mapObjectToDto(readingDetails);
+
+        return readingDetailsDto;
     }
 
     private ReadingDetails updateDetailsIfNotNull(ReadingDetails existingReadingDetails, ReadingDetailsDto dto) {
@@ -265,10 +272,12 @@ public class ReadingServiceImpl implements ReadingService {
     private ReadingDetails mapDtoToObject(ReadingDetailsDto readingDetailsDto) {
         ReadingDetails readingDetails = new ReadingDetails();
         readingDetails.setUser(userService.findByUserId(readingDetailsDto.getUserId()));
-        String sDate=readingDetailsDto.getDate();
+        SimpleDateFormat formatter = new SimpleDateFormat(
+                "dd-MM-yyyy");
+        String d= formatter.format(new Date());
         Date date= null;
         try {
-            date = new SimpleDateFormat("dd/MM/yyyy").parse(sDate);
+            date = formatter.parse(d);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -307,42 +316,47 @@ public class ReadingServiceImpl implements ReadingService {
     }
 
     private ReadingDetailsDto mapObjectToDto(ReadingDetails readingDetails) {
-        ReadingDetailsDto dto = new ReadingDetailsDto();
-        Date date = readingDetails.getDate();
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
-        String strDate = dateFormat.format(date);
-        dto.setDate(strDate);
-        dto.setDay(readingDetails.getDay());
-        dto.setInsulinBeforeBed(readingDetails.getInsulinBeforeBed());
-        dto.setSugarAtFast(readingDetails.getSugarAtFast());
-        dto.setMrngInsulinBeforeFood(readingDetails.getMrngInsulinBeforeFood());
-        dto.setMrngInsulinBeforeFoodTime(readingDetails.getMrngInsulinBeforeFoodTime());
-        dto.setMrngInsulinAfterFood(readingDetails.getMrngInsulinAfterFood());
-        dto.setMrngInsulinAfterFoodTime(readingDetails.getMrngInsulinAfterFoodTime());
-        dto.setMrngPlace(readingDetails.getMrngPlace());
-        dto.setMrngSugarBeforeFood(readingDetails.getMrngSugarBeforeFood());
-        dto.setMrngSugarBeforeFoodTime(readingDetails.getMrngSugarBeforeFoodTime());
-        dto.setMrngSugarAfterFood(readingDetails.getMrngSugarAfterFood());
-        dto.setMrngSugarAfterFoodTime(readingDetails.getMrngSugarAfterFoodTime());
-        dto.setNoonInsulinBeforeFood(readingDetails.getNoonInsulinBeforeFood());
-        dto.setNoonInsulinBeforeFoodTime(readingDetails.getNoonInsulinBeforeFoodTime());
-        dto.setNoonInsulinAfterFood(readingDetails.getNoonInsulinAfterFood());
-        dto.setNoonInsulinAfterFoodTime(readingDetails.getNoonInsulinAfterFoodTime());
-        dto.setNoonPlace(readingDetails.getNoonPlace());
-        dto.setNoonSugarBeforeFood(readingDetails.getNoonSugarBeforeFood());
-        dto.setNoonSugarBeforeFoodTime(readingDetails.getNoonSugarBeforeFoodTime());
-        dto.setNoonSugarAfterFood(readingDetails.getNoonSugarAfterFood());
-        dto.setNoonSugarAfterFoodTime(readingDetails.getNoonSugarAfterFoodTime());
-        dto.setEvngInsulinBeforeFood(readingDetails.getEvngInsulinBeforeFood());
-        dto.setEvngInsulinBeforeFoodTime(readingDetails.getEvngInsulinBeforeFoodTime());
-        dto.setEvngInsulinAfterFood(readingDetails.getEvngInsulinAfterFood());
-        dto.setEvngInsulinAfterFoodTime(readingDetails.getEvngInsulinAfterFoodTime());
-        dto.setEvngPlace(readingDetails.getEvngPlace());
-        dto.setEvngSugarBeforeFood(readingDetails.getEvngSugarBeforeFood());
-        dto.setEvngSugarBeforeFoodTime(readingDetails.getEvngSugarBeforeFoodTime());
-        dto.setEvngSugarAfterFood(readingDetails.getEvngSugarAfterFood());
-        dto.setEvngSugarAfterFoodTime(readingDetails.getEvngSugarAfterFoodTime());
-        return dto;
+        if(readingDetails!=null) {
+            ReadingDetailsDto dto = new ReadingDetailsDto();
+            Date date = readingDetails.getDate();
+            DateFormat dateFormat = new SimpleDateFormat(
+                    "dd-MM-yyyy");
+            String strDate = dateFormat.format(date);
+            dto.setDate(strDate);
+            dto.setDay(readingDetails.getDay());
+            dto.setInsulinBeforeBed(readingDetails.getInsulinBeforeBed());
+            dto.setSugarAtFast(readingDetails.getSugarAtFast());
+            dto.setMrngInsulinBeforeFood(readingDetails.getMrngInsulinBeforeFood());
+            dto.setMrngInsulinBeforeFoodTime(readingDetails.getMrngInsulinBeforeFoodTime());
+            dto.setMrngInsulinAfterFood(readingDetails.getMrngInsulinAfterFood());
+            dto.setMrngInsulinAfterFoodTime(readingDetails.getMrngInsulinAfterFoodTime());
+            dto.setMrngPlace(readingDetails.getMrngPlace());
+            dto.setMrngSugarBeforeFood(readingDetails.getMrngSugarBeforeFood());
+            dto.setMrngSugarBeforeFoodTime(readingDetails.getMrngSugarBeforeFoodTime());
+            dto.setMrngSugarAfterFood(readingDetails.getMrngSugarAfterFood());
+            dto.setMrngSugarAfterFoodTime(readingDetails.getMrngSugarAfterFoodTime());
+            dto.setNoonInsulinBeforeFood(readingDetails.getNoonInsulinBeforeFood());
+            dto.setNoonInsulinBeforeFoodTime(readingDetails.getNoonInsulinBeforeFoodTime());
+            dto.setNoonInsulinAfterFood(readingDetails.getNoonInsulinAfterFood());
+            dto.setNoonInsulinAfterFoodTime(readingDetails.getNoonInsulinAfterFoodTime());
+            dto.setNoonPlace(readingDetails.getNoonPlace());
+            dto.setNoonSugarBeforeFood(readingDetails.getNoonSugarBeforeFood());
+            dto.setNoonSugarBeforeFoodTime(readingDetails.getNoonSugarBeforeFoodTime());
+            dto.setNoonSugarAfterFood(readingDetails.getNoonSugarAfterFood());
+            dto.setNoonSugarAfterFoodTime(readingDetails.getNoonSugarAfterFoodTime());
+            dto.setEvngInsulinBeforeFood(readingDetails.getEvngInsulinBeforeFood());
+            dto.setEvngInsulinBeforeFoodTime(readingDetails.getEvngInsulinBeforeFoodTime());
+            dto.setEvngInsulinAfterFood(readingDetails.getEvngInsulinAfterFood());
+            dto.setEvngInsulinAfterFoodTime(readingDetails.getEvngInsulinAfterFoodTime());
+            dto.setEvngPlace(readingDetails.getEvngPlace());
+            dto.setEvngSugarBeforeFood(readingDetails.getEvngSugarBeforeFood());
+            dto.setEvngSugarBeforeFoodTime(readingDetails.getEvngSugarBeforeFoodTime());
+            dto.setEvngSugarAfterFood(readingDetails.getEvngSugarAfterFood());
+            dto.setEvngSugarAfterFoodTime(readingDetails.getEvngSugarAfterFoodTime());
+            return dto;
+        }else{
+            return null;
+        }
     }
 }
 

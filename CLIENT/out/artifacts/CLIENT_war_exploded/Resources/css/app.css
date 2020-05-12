@@ -2,30 +2,7 @@
 
 /* Add padding to containers */
 .container {
-  background-image: url("/resources/images/diacare/background.jpeg");
-
   padding: 16px;
-}
-.loginPage{
-  position:relative;
-}
-
-.loginBanner{
-  max-width: 100%;
-  height: auto;
-  width: auto;
-}
-
-.loginPage .loginpanel {
-  position:absolute;
-  bottom:5px;
-  left:5px;
-  z-index:20;
-}
-
-.loginPage img {
-  position:relative;
-  z-index:10;
 }
 
 .mainform {

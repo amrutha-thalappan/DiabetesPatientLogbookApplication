@@ -1,5 +1,6 @@
 package io.swagger.api;
 
+import io.swagger.model.LoggedInUser;
 import io.swagger.model.LoginCredentials;
 import io.swagger.model.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -36,21 +37,21 @@ public class LoginApiController implements LoginApi {
         this.request = request;
     }
 
-    public ResponseEntity<User> loginPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody LoginCredentials body
+    public ResponseEntity<LoggedInUser> loginPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody LoginCredentials body
 ) {
-        User user = null;
+        LoggedInUser loggedInUser = null;
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                user = loginService.verifyUser(body);
-                return new ResponseEntity<User>(user, HttpStatus.OK);
+                loggedInUser = loginService.verifyUser(body);
+                return new ResponseEntity<LoggedInUser>(loggedInUser, HttpStatus.OK);
             } catch (Exception e) {
                 log.error("Couldn't serialize response for content type application/json", e);
-                return new ResponseEntity<User>(HttpStatus.INTERNAL_SERVER_ERROR);
+                return new ResponseEntity<LoggedInUser>(HttpStatus.INTERNAL_SERVER_ERROR);
             }
         }
 
-        return new ResponseEntity<User>(HttpStatus.NOT_IMPLEMENTED);
+        return new ResponseEntity<LoggedInUser>(HttpStatus.NOT_IMPLEMENTED);
     }
 
 }

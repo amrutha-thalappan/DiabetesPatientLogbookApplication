@@ -14,5 +14,7 @@ public interface ReadingService {
 
     public ReadingDetails findByReadingId(Integer readingId);
 
-    ReadingDetails updateReading(Integer readingId, ReadingDetailsDto body);
+    ReadingDetails updateReading(ReadingDetailsDto body);
+
+    ReadingDetailsDto findTodaysReading(Integer userId);
 }

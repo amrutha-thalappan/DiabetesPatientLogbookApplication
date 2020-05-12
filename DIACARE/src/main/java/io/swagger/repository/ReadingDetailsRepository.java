@@ -13,4 +13,7 @@ public interface ReadingDetailsRepository extends JpaRepository<ReadingDetails, 
 
     @Query(value = "SELECT r from ReadingDetails r where r.user.userId = ?1 AND r.date <= ?2 AND r.date >= ?3")
     List<ReadingDetails> findByUserIdAndDateGreaterThanEqualAndDateLessThanEqual(Integer userId, Date now, Date dateOneWeekAgo);
+
+    ReadingDetails findByUserIdAndDate(Integer userId, Date now);
+
 }

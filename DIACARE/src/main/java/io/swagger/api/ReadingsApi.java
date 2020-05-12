@@ -78,19 +78,31 @@ public interface ReadingsApi {
 );
 
 
-    @ApiOperation(value = "Update reading", nickname = "readingsReadingIdPut", notes = "Api to update a reading having given id", response = ReadingDetails.class, tags={ "ReadingController", })
+    @ApiOperation(value = "Update reading", nickname = "readingsPut", notes = "Api to update a today's reading", response = ReadingDetails.class, tags={ "ReadingController", })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Updated", response = ReadingDetails.class),
         @ApiResponse(code = 400, message = "Invalid ID supplied", response = ErrorResponse.class),
         @ApiResponse(code = 404, message = "reading not found", response = ErrorResponse.class),
         @ApiResponse(code = 405, message = "Invalid input", response = ErrorResponse.class) })
-    @RequestMapping(value = "/readings/{readingId}",
+    @RequestMapping(value = "/readings/updateReadings",
         produces = { "application/json" }, 
         consumes = { "application/json" },
         method = RequestMethod.PUT)
-    ResponseEntity<ReadingDetails> readingsReadingIdPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody ReadingDetailsDto body
-, @Min(1)@ApiParam(value = "The ID of the reading to return",required=true, allowableValues="") @PathVariable("readingId") Integer readingId
+    ResponseEntity<ReadingDetails> readingsPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody ReadingDetailsDto body
 );
+
+
+    @ApiOperation(value = "return today's reading of the logged in user", nickname = "readingsReadingIdGet", notes = "Api to return today's reading of the logged in user", response = ReadingDetailsDto.class, tags={ "ReadingController", })
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "successful operation.Return today's reading", response = ReadingDetailsDto.class),
+            @ApiResponse(code = 400, message = "The specified reading ID is invalid", response = ErrorResponse.class),
+            @ApiResponse(code = 404, message = "No readng exists", response = ErrorResponse.class),
+            @ApiResponse(code = 200, message = "Unexpected error") })
+    @RequestMapping(value = "/readings/todaysReading",
+            produces = { "application/json" },
+            method = RequestMethod.GET)
+    ResponseEntity<ReadingDetailsDto> todaysReadingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestParam(value="userId", required=true) Integer userId
+    );
 
 
 }

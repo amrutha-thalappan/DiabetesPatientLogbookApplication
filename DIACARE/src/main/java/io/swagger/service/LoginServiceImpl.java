@@ -1,5 +1,6 @@
 package io.swagger.service;
 
+import io.swagger.model.LoggedInUser;
 import io.swagger.model.LoginCredentials;
 import io.swagger.model.LoginDetails;
 import io.swagger.model.User;
@@ -23,14 +24,22 @@ public class LoginServiceImpl implements LoginService {
     }
 
     @Override
-    public User verifyUser(LoginCredentials loginCredentials) throws Exception {
+    public LoggedInUser verifyUser(LoginCredentials loginCredentials) throws Exception {
+        LoggedInUser loggedInUser = new LoggedInUser();
         User user = null;
         LoginDetails credentials = loginRepository.findByUserNameAndPassword(loginCredentials.getUsername(),loginCredentials.getPassword());
+        loggedInUser.setUserId(credentials.getUserId().getUserId());
+        loggedInUser.setUserName(credentials.getUserName());
+        loggedInUser.setPassword(credentials.getPassword());
         if(credentials != null){
             user = userService.findByUserId(credentials.getUserId().getUserId());
+            loggedInUser.setFirstName(user.getFirstName());
+            loggedInUser.setLastName(user.getLastName());
+            loggedInUser.setContactNumber(user.getContactNumber());
+            loggedInUser.setEmail(user.getEmail());
         }else{
             throw new Exception("User not exists");
         }
-        return user;
+        return loggedInUser;
     }
 }

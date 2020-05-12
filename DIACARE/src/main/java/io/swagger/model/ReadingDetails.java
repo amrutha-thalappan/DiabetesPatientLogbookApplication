@@ -25,6 +25,7 @@ public class ReadingDetails implements Serializable {
     private User user;
 
     @Column(name = "date")
+    @Temporal(TemporalType.DATE)
     private Date date;
 
     @Column(name = "day")

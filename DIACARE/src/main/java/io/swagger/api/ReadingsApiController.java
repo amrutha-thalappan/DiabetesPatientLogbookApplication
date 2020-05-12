@@ -63,6 +63,8 @@ public class ReadingsApiController implements ReadingsApi {
         return new ResponseEntity<ReadingDetails>(readingDetails, HttpStatus.OK);
     }
 
+
+
     public ResponseEntity<Void> readingsReadingIdDelete(@Min(1)@ApiParam(value = "The ID of the reading to delete",required=true, allowableValues="") @PathVariable("readingId") Integer readingId
 ) {
         String accept = request.getHeader("Accept");
@@ -75,10 +77,23 @@ public class ReadingsApiController implements ReadingsApi {
         return new ResponseEntity<ReadingDetails>(readingDetails, HttpStatus.OK);
     }
 
-    public ResponseEntity<ReadingDetails> readingsReadingIdPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody ReadingDetailsDto body
-, @Min(1)@ApiParam(value = "The ID of the reading to return",required=true, allowableValues="") @PathVariable("readingId") Integer readingId
+    public ResponseEntity<ReadingDetails> readingsPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody ReadingDetailsDto body
 ) {
-        ReadingDetails updatedReadingDetails = readingService.updateReading(readingId, body);
+        ReadingDetails updatedReadingDetails = readingService.updateReading(body);
         return new ResponseEntity<ReadingDetails>(updatedReadingDetails, HttpStatus.OK);
     }
+
+
+    public ResponseEntity<ReadingDetailsDto> todaysReadingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestParam(value="userId", required=true) Integer userId
+    ) {
+        ReadingDetailsDto readingDetailsDto = null;
+        try {
+            readingDetailsDto = readingService.findTodaysReading(userId);
+            return new ResponseEntity<ReadingDetailsDto>(readingDetailsDto, HttpStatus.OK);
+        } catch (Exception e) {
+            log.error("Couldn't serialize response for content type application/json", e);
+            return new ResponseEntity<ReadingDetailsDto>(readingDetailsDto, HttpStatus.EXPECTATION_FAILED);
+        }
+    }
+
 }

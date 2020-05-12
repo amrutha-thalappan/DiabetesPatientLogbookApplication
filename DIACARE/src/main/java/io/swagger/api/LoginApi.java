@@ -6,6 +6,7 @@
 package io.swagger.api;
 
 import io.swagger.model.ErrorResponse;
+import io.swagger.model.LoggedInUser;
 import io.swagger.model.LoginCredentials;
 import io.swagger.model.User;
 import io.swagger.annotations.*;
@@ -23,9 +24,9 @@ import java.util.Map;
 @Api(value = "login", description = "the login API")
 public interface LoginApi {
 
-    @ApiOperation(value = "User login", nickname = "loginPost", notes = "Enables a user to login", response = User.class, tags={ "LoginController", })
+    @ApiOperation(value = "User login", nickname = "loginPost", notes = "Enables a user to login", response = LoggedInUser.class, tags={ "LoginController", })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "successful operation.Return a user", response = User.class),
+        @ApiResponse(code = 200, message = "successful operation.Return a user", response = LoggedInUser.class),
         @ApiResponse(code = 400, message = "Bad request", response = ErrorResponse.class),
         @ApiResponse(code = 404, message = "No user exists", response = ErrorResponse.class),
         @ApiResponse(code = 200, message = "Unexpected error") })
@@ -33,7 +34,7 @@ public interface LoginApi {
         produces = { "application/json" }, 
         consumes = { "application/json" },
         method = RequestMethod.POST)
-    ResponseEntity<User> loginPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody LoginCredentials body
+    ResponseEntity<LoggedInUser> loginPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody LoginCredentials body
 );
 
 }
