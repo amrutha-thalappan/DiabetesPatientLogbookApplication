@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dto.DataListDto;
 import dto.ReadingDetailsDto;
+import util.Utilities;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.SessionScoped;
@@ -27,7 +28,7 @@ public class DataListService implements Serializable {
 
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target("http://localhost:8080/readings/weekreadings")
-                .queryParam("userId", 1);
+                .queryParam("userId", Utilities.getUserId());
         Invocation.Builder invocationBuilder = target.request();
         Response response = invocationBuilder.get();
         List<ReadingDetailsDto> readingDetailsDtos = response.readEntity(new GenericType<List<ReadingDetailsDto>>() {});

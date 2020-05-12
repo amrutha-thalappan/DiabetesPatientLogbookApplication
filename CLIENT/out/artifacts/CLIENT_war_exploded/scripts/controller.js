@@ -52,6 +52,7 @@ function loginUser() {
        contentType: "application/json",
        success: function(result) {
            //alert('Hiiiiiiiiiiiiiii');
+           user
            window.location.href = "home.xhtml";
               },
               error: function() {
