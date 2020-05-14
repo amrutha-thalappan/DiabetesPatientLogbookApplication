@@ -24,11 +24,12 @@ import java.util.List;
 @ApplicationScoped
 public class DataListService implements Serializable {
 
-    public List<ReadingDetailsDto> getWeekReadings(){
+    public List<ReadingDetailsDto> getWeekReadings(Integer userId){
+
 
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target("http://localhost:8080/readings/weekreadings")
-                .queryParam("userId", Utilities.getUserId());
+                .queryParam("userId", userId);
         Invocation.Builder invocationBuilder = target.request();
         Response response = invocationBuilder.get();
         List<ReadingDetailsDto> readingDetailsDtos = response.readEntity(new GenericType<List<ReadingDetailsDto>>() {});

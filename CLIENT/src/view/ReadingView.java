@@ -3,10 +3,13 @@ package view;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dto.ReadingDetailsDto;
+import org.primefaces.context.RequestContext;
 import service.ReadingService;
 import util.Utilities;
 
 import javax.annotation.PostConstruct;
+import javax.faces.application.ConfigurableNavigationHandler;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
@@ -72,6 +75,21 @@ public class ReadingView implements Serializable {
 
     @PostConstruct
     public void init() {
+
+        if(Utilities.getUserId() == null)
+        {
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN,
+                    "Invalid Login!",
+                    "Please Login!"));
+            String  page = "http://localhost:8082/CLIENT_war_exploded/index.xhtml";
+            try {
+                FacesContext.getCurrentInstance().getExternalContext().redirect(page);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return;
+        }
 
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target("http://localhost:8080/readings/todaysReading")
