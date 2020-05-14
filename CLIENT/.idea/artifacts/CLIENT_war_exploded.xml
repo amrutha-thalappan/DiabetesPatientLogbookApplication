@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-ear" name="CLIENT:war exploded">
+  <artifact type="exploded-war" name="CLIENT:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/CLIENT_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
