@@ -21,6 +21,8 @@ import java.util.List;
 @ViewScoped
 public class DataDisplayView implements Serializable {
 
+    private String username;
+
     private List<ReadingDetailsDto> readingDetailsDtos;
 
     @ManagedProperty(value="#{dataListService}")
@@ -28,6 +30,7 @@ public class DataDisplayView implements Serializable {
 
     @PostConstruct
     public void init() {
+        username = "Hello "+Utilities.getUsername();
         Integer userId = Utilities.getUserId();
         if(userId == null)
         {
@@ -40,7 +43,6 @@ public class DataDisplayView implements Serializable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
             return;
         }
         readingDetailsDtos = dataListService.getWeekReadings(userId);
@@ -56,5 +58,13 @@ public class DataDisplayView implements Serializable {
 
     public void setReadingDetailsDtos(List<ReadingDetailsDto> readingDetailsDtos) {
         this.readingDetailsDtos = readingDetailsDtos;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

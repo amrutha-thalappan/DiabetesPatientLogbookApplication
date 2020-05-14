@@ -72,9 +72,6 @@ public class LoginView implements Serializable {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN,
                     "Invalid Login!",
                     "Please Try Again!"));
-
-            // invalidate session, and redirect to other pages
-            //message = "Invalid Login. Please Try Again!";
             return "index";
         }
     }

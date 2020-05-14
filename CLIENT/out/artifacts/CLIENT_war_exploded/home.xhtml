@@ -12,10 +12,15 @@
 <h:body>
 <!--    <script src="bootstrap/bootstrap.min.js"></script>-->
 <!--    <script src="scripts/controller.js"></script>-->
-    <h1>Hello user</h1>
+    <div id = "tab">
     <p>Add reading <a href="http://localhost:8082/CLIENT_war_exploded/dayview.xhtml">here</a>.</p>
 
+    <p:commandButton id="logoutButton" action="#{loginView.logout}"
+                     value="Logout" style="float: right;">
+    </p:commandButton>
+    </div>
 
+    <h:outputLabel value = "#{dataDisplayView.username}" />
 
     <p:dataTable var="readingDetailsDto" value="#{dataDisplayView.readingDetailsDtos}">
         <p:column>

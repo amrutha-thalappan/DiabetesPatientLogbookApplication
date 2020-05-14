@@ -33,4 +33,13 @@ public class Utilities {
         else
             return null;
     }
+
+    public static String getUsername()
+    {
+        HttpSession session = getSession();
+        if ( session != null )
+            return (String) session.getAttribute("username");
+        else
+            return null;
+    }
 }
