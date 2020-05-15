@@ -223,6 +223,7 @@
                     <p:column colspan="5" headerText="Morning"  styleClass="rowcolorblue"/>
                     <p:column colspan="5" headerText="Noon" styleClass="rowcolorpeach" />
                     <p:column colspan="5" headerText="Evening" styleClass="rowcolorgray"/>
+                    <p:column colspan="1" headerText="Comment" styleClass="rowcoloryellow"/>
                 </p:row>
                 <p:row>
                     <p:column  headerText="Date"  styleClass="rowcolorgreen" />
@@ -247,6 +248,8 @@
                     <p:column  headerText="Place" styleClass="rowcolorgray "/>
                     <p:column  headerText="Sugar B4 Dinner" styleClass="rowcolorgray "/>
                     <p:column  headerText="Sugar Aft Dinner" styleClass="rowcolorgray "/>
+
+                    <p:column  headerText="Comment" styleClass="rowcoloryellow"/>
                 </p:row>
             </p:columnGroup>
 
@@ -317,6 +320,10 @@
             </p:column>
             <p:column headerText="Evening: Sugar after food">
                 <h:outputText value="#{readingDetailsDto.evngSugarAfterFood}" />
+            </p:column>
+
+            <p:column headerText="Comment">
+                <h:outputText value="#{readingDetailsDto.comment}" />
             </p:column>
 
 

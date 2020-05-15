@@ -266,6 +266,11 @@ public class ReadingServiceImpl implements ReadingService {
             existingReadingDetails.setEvngSugarAfterFoodTime(evngSugarAfterFoodTime);
         }
 
+        String comment = dto.getComment();
+        if(comment != null){
+            existingReadingDetails.setComment(comment);
+        }
+
         return existingReadingDetails;
     }
 
@@ -312,6 +317,7 @@ public class ReadingServiceImpl implements ReadingService {
         readingDetails.setEvngSugarBeforeFoodTime(readingDetailsDto.getEvngSugarBeforeFoodTime());
         readingDetails.setEvngSugarAfterFood(readingDetailsDto.getEvngSugarAfterFood());
         readingDetails.setEvngSugarAfterFoodTime(readingDetailsDto.getEvngSugarAfterFoodTime());
+        readingDetails.setComment(readingDetailsDto.getComment());
         return readingDetails;
     }
 
@@ -353,6 +359,7 @@ public class ReadingServiceImpl implements ReadingService {
             dto.setEvngSugarBeforeFoodTime(readingDetails.getEvngSugarBeforeFoodTime());
             dto.setEvngSugarAfterFood(readingDetails.getEvngSugarAfterFood());
             dto.setEvngSugarAfterFoodTime(readingDetails.getEvngSugarAfterFoodTime());
+            dto.setComment(readingDetails.getComment());
             return dto;
         }else{
             return null;

@@ -14,6 +14,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpSession;
 import javax.ws.rs.client.*;
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.MediaType;
@@ -634,6 +635,17 @@ public class ReadingView implements Serializable {
         }
         try {
             FacesContext.getCurrentInstance().getExternalContext().redirect("home.xhtml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void logout() {
+        HttpSession session = Utilities.getSession();
+        session.invalidate();
+        String  page = "http://localhost:8082/CLIENT_war_exploded/index.xhtml";
+        try {
+            FacesContext.getCurrentInstance().getExternalContext().redirect(page);
         } catch (IOException e) {
             e.printStackTrace();
         }

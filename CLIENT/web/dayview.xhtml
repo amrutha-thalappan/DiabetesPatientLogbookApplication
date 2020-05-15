@@ -13,6 +13,15 @@
 </h:head>
 <h:body>
 
+
+    <div id = "tab">
+        <h:form id = "logoutForm">
+            <p:commandLink id="logout" actionListener="#{readingView.logout}" value="Logout"
+                           style="margin-right:20px; float: right;">
+            </p:commandLink>
+        </h:form>
+    </div>
+
     <h:form>
         <!--        <p:fieldset legend="Today's Reading" toggleable="true" toggleSpeed="500" >-->
 
@@ -83,11 +92,8 @@
                 <td class="rowcolorblue">
                     <h:outputLabel value = "Place" />
                 </td>
-                <td>
+                <td colspan="2">
                     <h:inputText value="#{readingView.mrngPlace}"   />
-                </td>
-                <td>
-                    <h:inputText  value="#{readingView.mrngPlace}"  />
                 </td>
             </tr>
             <tr>
@@ -138,10 +144,7 @@
                 <td class="rowcolorpeach">
                     <h:outputLabel value = "Place" />
                 </td>
-                <td>
-                    <h:inputText value="#{readingView.noonPlace}" />
-                </td>
-                <td>
+                <td colspan="2">
                     <h:inputText value="#{readingView.noonPlace}" />
                 </td>
             </tr>
@@ -193,10 +196,7 @@
                 <td class="rowcolorgray">
                     <h:outputLabel value = "Place" />
                 </td>
-                <td>
-                    <h:inputText value="#{readingView.evngPlace}" />
-                </td>
-                <td>
+                <td colspan="2">
                     <h:inputText value="#{readingView.evngPlace}" />
                 </td>
             </tr>
@@ -220,6 +220,14 @@
                 </td>
                 <td>
                     <h:inputText value="#{readingView.evngSugarAfterFoodTime}" />
+                </td>
+            </tr>
+            <tr>
+                <td class="rowcolorgray">
+                    <h:outputLabel value = "Comment" />
+                </td>
+                <td colspan="2">
+                    <h:inputText value="#{readingView.comment}" />
                 </td>
             </tr>
         </table>
