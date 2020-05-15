@@ -9,57 +9,54 @@ input[type=text] {
 }
 .pnlDayView
 {
-  border: 0.5px solid #A9A9A9;
+  /*border: 0.5px solid #A9A9A9;*/
      margin: auto;
-    width: 90%  ;
+    width: 97%;
 
 }
 
 
-tr {
-
+tr,th {
+    padding: unset;
 }
 td {
-    padding: 5px;
+    /*padding: 5px;*/
     /*border: 1px solid #A9A9A9;*/
     height: 32px;
 
 }
 
-
-/*tr{*/
-/*    margin: 10px;*/
-/*    padding: 5px;*/
-/*}*/
-/*td {*/
-/*    !*   padding: 0.25em 2em 0.25em 0em;*!*/
-/*    !*border-style: none;*!*/
-/*    border-color: #e3dede;*/
-/*    border-width: 1px;*/
-/*    padding-left: 5px;*/
-/*    !*text-align: center;*!*/
-/*}*/
-
+.font {
+    font-size: 15px;
+    font-family: "Courier New";
+    color: black;
+    text-shadow: none;
+    padding: unset;
+}
 .rowcolorgreen
  {
-    background-color: #92D050;
+
+    background: #92D050;
     height: 70px;
-    padding: -5px;
+
  }
 .rowcolorblue
 {
-    background-color: #95B3D7;
+
+    background: #95B3D7;
     height: 70px;
 }
 .rowcolorpeach
 {
-    background-color: #FABF8F;
+
+    background: #FABF8F;
     height: 70px;
 }
 .rowcolorgray
 {
-    background-color: #BFBFBF;
+    background: #BFBFBF;
     height: 70px;
+
 }
 .center
 {
@@ -79,3 +76,28 @@ td {
     width: 100px;
     background-color: transparent;
 }
+.ui-datatable thead th, .ui-datatable tbody td, .ui-datatable tfoot td, .ui-datatable tfoot th
+{
+    /*all: unset;*/
+    padding: unset;
+    overflow: hidden;
+    border: 1px solid #696969;
+    text-align: center;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default
+{
+
+    border: 1px solid #696969;
+    /*background: none;*/
+
+    font-weight: bold;
+    color: #2F4F4F;
+    text-shadow: none;
+    box-shadow: none;
+}
+/*.reset-this-root {*/
+/*    all: initial;*/
+/** {*/
+/*    all: unset;*/
+/*}*/
+/*}*/

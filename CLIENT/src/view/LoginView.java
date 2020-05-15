@@ -18,6 +18,7 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.io.IOException;
 import java.io.Serializable;
 
 @ManagedBean
@@ -46,7 +47,7 @@ public class LoginView implements Serializable {
         this.password = password;
     }
 
-    public String login(){
+    public void login(){
         LoginCredentials loginCredentials = new LoginCredentials();
         loginCredentials.setUsername(this.getUsername());
         loginCredentials.setPassword(this.getPassword());
@@ -63,22 +64,23 @@ public class LoginView implements Serializable {
         }
         Response response =  clientTraget.request(MediaType.APPLICATION_JSON).post(Entity.json(jsonString));
         LoggedInUser loggedInUser = response.readEntity(LoggedInUser.class);
+        String  page = "http://localhost:8082/CLIENT_war_exploded/index.xhtml";
         if(loggedInUser!=null){
             HttpSession session = Utilities.getSession();
             session.setAttribute("userid", loggedInUser.getUserId());
             session.setAttribute("username", loggedInUser.getUserName());
-            return "home";
+            page = "http://localhost:8082/CLIENT_war_exploded/home.xhtml";
         }else {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN,
                     "Invalid Login!",
                     "Please Try Again!"));
-            return "index";
+        };
+        try {
+            FacesContext.getCurrentInstance().getExternalContext().redirect(page);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
-    public String logout() {
-        HttpSession session = Utilities.getSession();
-        session.invalidate();
-        return "login";
-    }
+
 }

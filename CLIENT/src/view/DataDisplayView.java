@@ -13,6 +13,7 @@ import javax.faces.bean.ManagedProperty;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.List;
@@ -66,5 +67,16 @@ public class DataDisplayView implements Serializable {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public void logout() {
+        HttpSession session = Utilities.getSession();
+        session.invalidate();
+        String  page = "http://localhost:8082/CLIENT_war_exploded/index.xhtml";
+        try {
+            FacesContext.getCurrentInstance().getExternalContext().redirect(page);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
