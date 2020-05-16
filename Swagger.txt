@@ -171,12 +171,12 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
         default:
           description: "Unexpected error"
-  /readings:
+  /readings/weekreadings:
     get:
-      summary: "return today's reading of the logged in user"
+      summary: "return readings of today"
       tags: 
         - "ReadingController"
-      description: "Api to return today's reading of the logged in user"
+      description: "Api to return readings of today"
       parameters:
         - name: "userId"
           in: header
@@ -187,7 +187,7 @@ paths:
             minimum: 1
       responses:
         '200':
-          description: "Return all readings of the given user"
+          description: "Return last week readings of the given user"
           content:
             application/json:
               schema:

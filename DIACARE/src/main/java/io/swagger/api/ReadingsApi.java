@@ -30,13 +30,13 @@ public interface ReadingsApi {
     ResponseEntity<Void> readingsDelete();
 */
 
-    @ApiOperation(value = "Return readings of today", nickname = "readingsGet", notes = "Api to return readngs of today", response = ReadingDetailsDto.class, responseContainer = "List", tags={ "ReadingController", })
-    @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "Return all readings of the given day of the given user", response = ReadingDetailsDto.class, responseContainer = "List"),
+    @ApiOperation(value = "Return readings of last week", nickname = "readingsGet", notes = "Api to return readngs last week", response = ReadingDetailsDto.class, responseContainer = "List", tags={ "ReadingController", })
+    @ApiResponses(value = {
+        @ApiResponse(code = 200, message = "Return last week readings of the given user", response = ReadingDetailsDto.class, responseContainer = "List"),
         @ApiResponse(code = 400, message = "The given userId or date is invalid", response = ErrorResponse.class),
         @ApiResponse(code = 404, message = "No user exists with given id", response = ErrorResponse.class),
         @ApiResponse(code = 200, message = "Unexpected error") })
-    @RequestMapping(value = "/readings/todaysReadings",
+    @RequestMapping(value = "/readings/weekreadings",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
     ResponseEntity<List<ReadingDetailsDto>> readingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestParam(value="userId", required=true) Integer userId
