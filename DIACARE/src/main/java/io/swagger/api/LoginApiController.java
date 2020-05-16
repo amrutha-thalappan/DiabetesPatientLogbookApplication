@@ -1,10 +1,9 @@
 package io.swagger.api;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.swagger.annotations.ApiParam;
 import io.swagger.model.LoggedInUser;
 import io.swagger.model.LoginCredentials;
-import io.swagger.model.User;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import io.swagger.annotations.*;
 import io.swagger.service.LoginService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,8 +14,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-21T16:30:27.879Z[GMT]")
 @CrossOrigin(origins = "http://localhost:8082", maxAge = 3600)
 @Controller

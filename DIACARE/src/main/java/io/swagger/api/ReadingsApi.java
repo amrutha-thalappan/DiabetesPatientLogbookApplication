@@ -5,13 +5,14 @@
  */
 package io.swagger.api;
 
-import io.swagger.model.*;
 import io.swagger.annotations.*;
+import io.swagger.model.ErrorResponse;
+import io.swagger.model.ReadingDetails;
+import io.swagger.model.ReadingDetailsDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import javax.validation.constraints.*;
 import java.util.List;
 
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-21T16:30:27.879Z[GMT]")
@@ -19,7 +20,7 @@ import java.util.List;
 @Api(value = "readings", description = "the readings API")
 public interface ReadingsApi {
 
-    @ApiOperation(value = "Delete all readings", nickname = "readingsDelete", notes = "Api to delete all readings", tags={ "ReadingController", })
+    /*@ApiOperation(value = "Delete all readings", nickname = "readingsDelete", notes = "Api to delete all readings", tags={ "ReadingController", })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Deleted"),
         @ApiResponse(code = 404, message = "No reading exists to delete", response = ErrorResponse.class) })
@@ -27,15 +28,15 @@ public interface ReadingsApi {
         produces = { "application/json" }, 
         method = RequestMethod.DELETE)
     ResponseEntity<Void> readingsDelete();
+*/
 
-
-    @ApiOperation(value = "Return readings of the last week of logged in user", nickname = "readingsGet", notes = "Api to return all the readngs of the last week of the logged in user", response = ReadingDetailsDto.class, responseContainer = "List", tags={ "ReadingController", })
+    @ApiOperation(value = "Return readings of today", nickname = "readingsGet", notes = "Api to return readngs of today", response = ReadingDetailsDto.class, responseContainer = "List", tags={ "ReadingController", })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Return all readings of the given day of the given user", response = ReadingDetailsDto.class, responseContainer = "List"),
         @ApiResponse(code = 400, message = "The given userId or date is invalid", response = ErrorResponse.class),
         @ApiResponse(code = 404, message = "No user exists with given id", response = ErrorResponse.class),
         @ApiResponse(code = 200, message = "Unexpected error") })
-    @RequestMapping(value = "/readings/weekreadings",
+    @RequestMapping(value = "/readings/todaysReadings",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
     ResponseEntity<List<ReadingDetailsDto>> readingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestParam(value="userId", required=true) Integer userId
@@ -54,6 +55,7 @@ public interface ReadingsApi {
 );
 
 
+/*
     @ApiOperation(value = "delete a reading of logged in user", nickname = "readingsReadingIdDelete", notes = "Api to delete a reading having given id of logged in user", tags={ "ReadingController", })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Deleted"),
@@ -76,6 +78,7 @@ public interface ReadingsApi {
         method = RequestMethod.GET)
     ResponseEntity<ReadingDetails> readingsReadingIdGet(@Min(1)@ApiParam(value = "The ID of the reading to return",required=true, allowableValues="") @PathVariable("readingId") Integer readingId
 );
+*/
 
 
     @ApiOperation(value = "Update reading", nickname = "readingsPut", notes = "Api to update a today's reading", response = ReadingDetails.class, tags={ "ReadingController", })

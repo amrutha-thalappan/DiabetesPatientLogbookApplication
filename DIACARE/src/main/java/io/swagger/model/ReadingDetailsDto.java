@@ -1,8 +1,5 @@
 package io.swagger.model;
 
-import javax.persistence.*;
-import java.util.Date;
-
 public class ReadingDetailsDto {
 
     private Integer userId;

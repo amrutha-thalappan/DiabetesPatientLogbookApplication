@@ -3,7 +3,6 @@ package io.swagger.service;
 import io.swagger.model.LoggedInUser;
 import io.swagger.model.LoginCredentials;
 import io.swagger.model.LoginDetails;
-import io.swagger.model.User;
 import org.springframework.stereotype.Service;
 
 @Service

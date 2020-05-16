@@ -1,9 +1,8 @@
 package io.swagger.api;
 
-import io.swagger.model.ChangePasswordDto;
-import io.swagger.model.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.swagger.annotations.*;
+import io.swagger.annotations.ApiParam;
+import io.swagger.model.User;
 import io.swagger.model.UserDto;
 import io.swagger.service.UserService;
 import org.slf4j.Logger;
@@ -11,17 +10,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.constraints.*;
-import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.List;
+import javax.validation.Valid;
 
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-21T16:30:27.879Z[GMT]")
 @CrossOrigin(origins = "http://localhost:8082", maxAge = 3600)
@@ -42,12 +36,12 @@ public class UsersApiController implements UsersApi {
         this.objectMapper = objectMapper;
         this.request = request;
     }
-
+/*
     public ResponseEntity<Void> usersChangePasswordPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody ChangePasswordDto body
 ) {
         String accept = request.getHeader("Accept");
         return new ResponseEntity<Void>(HttpStatus.NOT_IMPLEMENTED);
-    }
+    }*/
 
     public ResponseEntity<User> usersPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody UserDto body
 ) {

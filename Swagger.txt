@@ -1,129 +1,9 @@
 openapi: 3.0.0
 info:
-  title: "user-api"
+  title: "Diabetes-api"
   version: "1.0"
   
 paths:
-  /users:
-    get:
-      summary: "Return all users"
-      tags: 
-        - "UserController"
-      description: "Api to return all the users"
-      responses:
-        '200':
-          description: "successful operation. Produces list of users"
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/User'
-        '400':
-          description: "The specified user ID is invalid (not a number)"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '404':
-          description: "No user exists"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        default:
-          description: "Unexpected error"
-  /users/{id}:
-    get:
-      summary: "Return user having given id"
-      tags: 
-        - "UserController"
-      description: "Api to return user having given id"
-      parameters:
-        - name: id
-          in: path
-          required: true
-          description: "The ID of the user to return"
-          schema:
-            type: integer
-            minimum: 1
-      responses:
-        '200':
-          description: "successful operation.Return a user having given id"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/User'
-        '400':
-          description: "The specified user ID is invalid (not a number)"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '404':
-          description: "No user exists"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        default:
-          description: "Unexpected error"
-    put:
-      summary: "Update user"
-      tags: 
-        - "UserController"
-      description: "Api to update a user having given id"
-      parameters:
-        - name: id
-          in: path
-          required: true
-          description: "The ID of the user to return"
-          schema:
-            type: integer
-            minimum: 1
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/User'
-      responses:
-        '200':
-          description: "Updated"
-        '405':
-          description: "Invalid input"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '400':
-          description: "Invalid ID supplied"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '404':
-          description: "user not found"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-    delete:
-      summary: "delete a user"
-      tags: 
-        - "UserController"
-      description: "Api to delete a user having given id"
-      parameters:
-        - name: id
-          in: path
-          required: true
-          description: "The ID of the user to return"
-          schema:
-            type: integer
-            minimum: 1
-      responses:
-        '200':
-          description: "Deleted"
   /users/:
     post:
       summary: "Create a new user"
@@ -135,7 +15,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/User'
+              $ref: '#/components/schemas/UserDto'
       responses:
         '201':
           description: "Created"
@@ -145,47 +25,6 @@ paths:
                 $ref: '#/components/schemas/User'
         '405':
           description: "Invalid input"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-    delete:
-      summary: "Delete all user"
-      tags: 
-        - "UserController"
-      description: "Api to delete all user"
-      responses:
-        '200':
-          description: "Deleted"
-  /users/changePassword:
-    put:
-      summary: "Change password user"
-      tags: 
-        - "UserController"
-      description: "Api to update password of the loggedin user"
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ChangePasswordDto'
-      responses:
-        '200':
-          description: "Password updated"
-        '404':
-          description: "Current password mismatch"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '417':
-          description: "Invalid password format"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '412':
-          description: "Precondition failed. Password mismatch"
           content:
             application/json:
               schema:
@@ -209,7 +48,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: '#/components/schemas/LoggedInUser'
         '400':
           description: "Bad request"
           content:
@@ -224,105 +63,34 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
         default:
           description: "Unexpected error"
-  /forgotpassword:
-    post:
-      summary: "Forgot password"
-      tags: 
-        - "LoginController"
-      description: "Enables user to give emailid to recieve mail to update password"
-      parameters:
-        - name: "email"
-          in: path
-          required: true
-          description: "The email ID of the user to recieve password update mail."
-          schema:
-            type: string
-            minimum: 1
-      responses:
-        '200':
-          description: "successfully sent an email to the user"
-        '400':
-          description: "Bad request"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '404':
-          description: "No user exists with given email address"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '417':
-          description: "Email format is wrong"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        default:
-          description: "Unexpected error"
-          
-  /readings/{readingId}:
-    get:
-      summary: "return reading of the logged in user based on the given reading id"
-      tags: 
-        - ReadingController
-      description: "Api to return reading of the logged in user based on the given reading id"
-      parameters:
-        - name: readingId
-          in: path
-          required: true
-          description: "The ID of the reading to return"
-          schema:
-            type: integer
-            minimum: 1
-      responses:
-        '200':
-          description: "successful operation.Return a user having given id"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Reading'
-        '400':
-          description: "The specified reading ID is invalid"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '404':
-          description: "No readng exists"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        default:
-          description: "Unexpected error"
+  
+  /readings/updateReadings:
     put:
-      summary: Update reading
+      summary: "Update reading"
       tags: 
         - ReadingController
-      description: "Api to update a reading having given id"
+      description: "Api to update today's reading"
       parameters:
-        - name: readingId
-          in: path
+        - name: "userId"
+          in: query
           required: true
-          description: "The ID of the reading to return"
+          description: "The ID of the user whose readings need to be updated."
           schema:
-            type: integer
+            type: number
             minimum: 1
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Reading'
+              $ref: '#/components/schemas/ReadingDetailsDto'
       responses:
         '200':
           description: Updated
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Reading'
+                $ref: '#/components/schemas/ReadingDetailsDto'
         '405':
           description: Invalid input
           content:
@@ -341,28 +109,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
-    delete:
-      summary: "delete a reading of logged in user"
-      tags: 
-        - ReadingController
-      description: "Api to delete a reading having given id of logged in user"
-      parameters:
-        - name: readingId
-          in: path
-          required: true
-          description: "The ID of the reading to delete"
-          schema:
-            type: integer
-            minimum: 1
-      responses:
-        '200':
-          description: Deleted
-        '404':
-          description: "reading not found"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
   /readings/:
     post:
       summary: "Save a new reading"
@@ -374,35 +120,33 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Reading'
+              $ref: '#/components/schemas/ReadingDetailsDto'
       responses:
         '201':
           description: "Created"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReadingDetails'
         '405':
           description: "Invalid input"
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
+  /readings/todaysReading:
     get:
-      summary: "Return readings of the given day of logged in user"
+      summary: "Return readings of today"
       tags: 
         - "ReadingController"
-      description: "Api to return all the readngs of the given day of the logged in user"
+      description: "Api to return readngs of today"
       parameters:
         - name: "userId"
-          in: header
+          in: query
           required: true
           description: "The ID of the user whose readings need to be retrieved."
           schema:
-            type: string
-            minimum: 1
-        - name: "date"
-          in: header
-          required: true
-          description: "The selected date on which day's readings that we have to retrieve"
-          schema:
-            type: string
+            type: number
             minimum: 1
       responses:
         '200':
@@ -412,7 +156,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Reading'
+                  $ref: '#/components/schemas/ReadingDetailsDto'
         '400':
           description: "The given userId or date is invalid"
           content:
@@ -427,34 +171,19 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
         default:
           description: "Unexpected error"
-          
-    delete:
-      summary: "Delete all readings"
-      tags: 
-        - ReadingController
-      description: "Api to delete all readings"
-      responses:
-        '200':
-          description: Deleted
-        '404':
-          description: "No reading exists to delete"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-  /readings/{userId}:
+  /readings:
     get:
-      summary: "Return all readings of the logged in user"
+      summary: "return today's reading of the logged in user"
       tags: 
         - "ReadingController"
-      description: "Api to return all the readng of the logged in user"
+      description: "Api to return today's reading of the logged in user"
       parameters:
         - name: "userId"
-          in: path
+          in: header
           required: true
           description: "The ID of the user whose readings need to be retrieved."
           schema:
-            type: string
+            type: integer
             minimum: 1
       responses:
         '200':
@@ -464,7 +193,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Reading'
+                  $ref: '#/components/schemas/ReadingDetailsDto'
         '400':
           description: "The given userId is invalid"
           content:
@@ -482,7 +211,7 @@ paths:
           
 components:
   schemas:
-    User:
+    UserDto:
       type: "object"
       properties:
         firstName:
@@ -497,24 +226,21 @@ components:
           type: "string"
         password:
           type: "string"
-        address:
-          type: "array"
-          items:
-            $ref: '#/components/schemas/Address'
-    Address:
+    User:
       type: "object"
       properties:
-        city:
+        firstName:
           type: "string"
-        pincode:
+        lastName:
           type: "string"
-    ErrorResponse:
-      type: "object"
-      properties:
-        statuscode:
-          type: "integer"
-        message:
+        contactNumber:
           type: "string"
+        email:
+          type: "string"
+        id:
+          type: "number"
+        userId:
+          type: "number"
     LoginCredentials:
       type: "object"
       properties:
@@ -522,19 +248,176 @@ components:
           type: "string"
         password:
           type: "string"
-    ChangePasswordDto:
+    LoggedInUser:
       type: "object"
       properties:
-        currentPassword:
+        firstName:
           type: "string"
-        newPassword:
+        lastName:
           type: "string"
-        confirmPassword:
+        contactNumber:
           type: "string"
-    Reading:
-      type: "object"
-      properties:
-        Date:
+        email:
           type: "string"
-        reading:
+        userName:
+          type: "string"
+        password:
+          type: "string"
+        userId:
           type: "number"
+    ErrorResponse:
+      type: "object"
+      properties:
+        statuscode:
+          type: "integer"
+        message:
+          type: "string"
+    ReadingDetailsDto:
+      type: "object"
+      properties:
+        userId:
+          type: "number"
+        date:
+          type: "string"
+        day:
+          type: "string"
+        insulinBeforeBed:
+          type: "number"
+        insulinBeforeBedTime:
+          type: "string"
+        sugarAtFast:
+          type: "number"
+        sugarAtFastTime:
+          type: "string"
+        mrngInsulinBeforeFood:
+          type: "number"
+        mrngInsulinBeforeFoodTime:
+          type: "string"
+        mrngInsulinAfterFood:
+          type: "number"
+        mrngInsulinAfterFoodTime:
+          type: "string"
+        mrngPlace:
+          type: "string"
+        mrngSugarBeforeFood:
+          type: "number"
+        mrngSugarBeforeFoodTime:
+          type: "string"
+        mrngSugarAfterFood:
+          type: "number"
+        mrngSugarAfterFoodTime:
+          type: "string"
+        noonInsulinBeforeFood:
+          type: "number"
+        noonInsulinBeforeFoodTime:
+          type: "string"
+        noonInsulinAfterFood:
+          type: "number"
+        noonInsulinAfterFoodTime:
+          type: "string"
+        noonPlace:
+          type: "string"
+        noonSugarBeforeFood:
+          type: "number"
+        noonSugarBeforeFoodTime:
+          type: "string"
+        noonSugarAfterFood:
+          type: "number"
+        noonSugarAfterFoodTime:
+          type: "string"
+        evngInsulinBeforeFood:
+          type: "number"
+        evngInsulinBeforeFoodTime:
+          type: "string"
+        evngInsulinAfterFood:
+          type: "number"
+        evngInsulinAfterFoodTime:
+          type: "string"
+        evngPlace:
+          type: "string"
+        evngSugarBeforeFood:
+          type: "number"
+        evngSugarBeforeFoodTime:
+          type: "string"
+        evngSugarAfterFood:
+          type: "number"
+        evngSugarAfterFoodTime:
+          type: "string"
+        comment:
+          type: "string"
+          
+    ReadingDetails:
+      type: "object"
+      properties:
+        id:
+          type: "number"
+        userId:
+          type: "number"
+        date:
+          type: "string"
+        day:
+          type: "string"
+        insulinBeforeBed:
+          type: "number"
+        insulinBeforeBedTime:
+          type: "string"
+        sugarAtFast:
+          type: "number"
+        sugarAtFastTime:
+          type: "string"
+        mrngInsulinBeforeFood:
+          type: "number"
+        mrngInsulinBeforeFoodTime:
+          type: "string"
+        mrngInsulinAfterFood:
+          type: "number"
+        mrngInsulinAfterFoodTime:
+          type: "string"
+        mrngPlace:
+          type: "string"
+        mrngSugarBeforeFood:
+          type: "number"
+        mrngSugarBeforeFoodTime:
+          type: "string"
+        mrngSugarAfterFood:
+          type: "number"
+        mrngSugarAfterFoodTime:
+          type: "string"
+        noonInsulinBeforeFood:
+          type: "number"
+        noonInsulinBeforeFoodTime:
+          type: "string"
+        noonInsulinAfterFood:
+          type: "number"
+        noonInsulinAfterFoodTime:
+          type: "string"
+        noonPlace:
+          type: "string"
+        noonSugarBeforeFood:
+          type: "number"
+        noonSugarBeforeFoodTime:
+          type: "string"
+        noonSugarAfterFood:
+          type: "number"
+        noonSugarAfterFoodTime:
+          type: "string"
+        evngInsulinBeforeFood:
+          type: "number"
+        evngInsulinBeforeFoodTime:
+          type: "string"
+        evngInsulinAfterFood:
+          type: "number"
+        evngInsulinAfterFoodTime:
+          type: "string"
+        evngPlace:
+          type: "string"
+        evngSugarBeforeFood:
+          type: "number"
+        evngSugarBeforeFoodTime:
+          type: "string"
+        evngSugarAfterFood:
+          type: "number"
+        evngSugarAfterFoodTime:
+          type: "string"
+        comment:
+          type: "string"

@@ -1,7 +1,6 @@
 package io.swagger.model;
 
 import io.swagger.annotations.ApiModelProperty;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
