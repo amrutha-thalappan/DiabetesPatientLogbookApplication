@@ -22,6 +22,7 @@ import java.util.Map;
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-21T16:30:27.879Z[GMT]")
 @CrossOrigin(origins = "http://localhost:8082", maxAge = 3600)
 @Api(value = "login", description = "the login API")
+@RequestMapping(value = "/login")
 public interface LoginApi {
 
     @ApiOperation(value = "User login", nickname = "loginPost", notes = "Enables a user to login", response = LoggedInUser.class, tags={ "LoginController", })
@@ -30,11 +31,8 @@ public interface LoginApi {
         @ApiResponse(code = 400, message = "Bad request", response = ErrorResponse.class),
         @ApiResponse(code = 404, message = "No user exists", response = ErrorResponse.class),
         @ApiResponse(code = 200, message = "Unexpected error") })
-    @RequestMapping(value = "/login",
-        produces = { "application/json" }, 
-        consumes = { "application/json" },
-        method = RequestMethod.POST)
-    ResponseEntity<LoggedInUser> loginPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody LoginCredentials body
+    @PostMapping
+    ResponseEntity<?> loginPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody LoginCredentials body
 );
 
 }

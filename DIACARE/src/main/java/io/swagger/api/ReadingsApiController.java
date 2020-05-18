@@ -2,6 +2,7 @@ package io.swagger.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.ApiParam;
+import io.swagger.model.ErrorResponse;
 import io.swagger.model.ReadingDetails;
 import io.swagger.model.ReadingDetailsDto;
 import io.swagger.service.ReadingService;
@@ -37,59 +38,48 @@ public class ReadingsApiController implements ReadingsApi {
         this.request = request;
     }
 
-   /* public ResponseEntity<Void> readingsDelete() {
-        String accept = request.getHeader("Accept");
-        return new ResponseEntity<Void>(HttpStatus.NOT_IMPLEMENTED);
-    }*/
+    public ResponseEntity<?> readingsPost(@ApiParam(value = "" ,required=true )
+                                          @Valid @RequestBody ReadingDetailsDto body) {
+        ReadingDetails readingDetails = readingService.saveReading(body);
+        return new ResponseEntity<>(readingDetails, HttpStatus.OK);
+    }
 
-    public ResponseEntity<List<ReadingDetailsDto>> readingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestParam(value="userId", required=true) Integer userId
-) {
-        List<ReadingDetailsDto> readingDetailsDtos = null;
+    public ResponseEntity<?> readingsPut(@ApiParam(value = "" ,required=true )
+                                         @Valid @RequestBody ReadingDetailsDto body) {
         try {
-            readingDetailsDtos = readingService.findReadingsOflastWeek(userId);
-            return new ResponseEntity<List<ReadingDetailsDto>>(readingDetailsDtos, HttpStatus.OK);
-        } catch (Exception e) {
-            log.error("Couldn't serialize response for content type application/json", e);
-            return new ResponseEntity<List<ReadingDetailsDto>>(readingDetailsDtos, HttpStatus.EXPECTATION_FAILED);
+            ReadingDetails updatedReadingDetails = readingService.updateReading(body);
+            return new ResponseEntity<>(updatedReadingDetails, HttpStatus.OK);
+        }catch(Exception e){
+            return new ResponseEntity<>(new ErrorResponse(
+                    417, "Cannot update reading"), HttpStatus.EXPECTATION_FAILED);
         }
     }
 
-    public ResponseEntity<ReadingDetails> readingsPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody ReadingDetailsDto body
-) {
-        ReadingDetails readingDetails = readingService.saveReading(body);
-        return new ResponseEntity<ReadingDetails>(readingDetails, HttpStatus.OK);
-    }
 
-
-
-/*    public ResponseEntity<Void> readingsReadingIdDelete(@Min(1)@ApiParam(value = "The ID of the reading to delete",required=true, allowableValues="") @PathVariable("readingId") Integer readingId
-) {
-        String accept = request.getHeader("Accept");
-        return new ResponseEntity<Void>(HttpStatus.NOT_IMPLEMENTED);
-    }*/
-
-   /* public ResponseEntity<ReadingDetails> readingsReadingIdGet(@Min(1)@ApiParam(value = "The ID of the reading to return",required=true, allowableValues="") @PathVariable("readingId") Integer readingId
-) {
-        ReadingDetails readingDetails = readingService.findByReadingId(readingId);
-        return new ResponseEntity<ReadingDetails>(readingDetails, HttpStatus.OK);
-    }*/
-
-    public ResponseEntity<ReadingDetails> readingsPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody ReadingDetailsDto body
-) {
-        ReadingDetails updatedReadingDetails = readingService.updateReading(body);
-        return new ResponseEntity<ReadingDetails>(updatedReadingDetails, HttpStatus.OK);
-    }
-
-
-    public ResponseEntity<ReadingDetailsDto> todaysReadingsGet(@ApiParam(value = "The ID of the user whose readings need to be retrieved." ,required=true) @RequestParam(value="userId", required=true) Integer userId
-    ) {
+    public ResponseEntity<?> todaysReadingsGet(@ApiParam(
+            value = "The ID of the user whose readings need to be retrieved." ,required=true)
+                                               @RequestParam(value="userId", required=true) Integer userId) {
         ReadingDetailsDto readingDetailsDto = null;
         try {
             readingDetailsDto = readingService.findTodaysReading(userId);
-            return new ResponseEntity<ReadingDetailsDto>(readingDetailsDto, HttpStatus.OK);
+            return new ResponseEntity<>(readingDetailsDto, HttpStatus.OK);
         } catch (Exception e) {
-            log.error("Couldn't serialize response for content type application/json", e);
-            return new ResponseEntity<ReadingDetailsDto>(readingDetailsDto, HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<>(new ErrorResponse(
+                    17, "Cannot find reading "), HttpStatus.EXPECTATION_FAILED);
+        }
+    }
+
+    public ResponseEntity<?> allReadingsGet(@ApiParam(
+            value = "The ID of the user whose readings need to be retrieved." ,
+            required=true) @RequestParam(value="userId", required=true) Integer userId) {
+        List<ReadingDetailsDto> readingDetailsDtos = null;
+        try {
+            readingDetailsDtos = readingService.findAllReadings(userId);
+            return new ResponseEntity<>(readingDetailsDtos, HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(new ErrorResponse(
+                    417, "Cannot find reading list"), HttpStatus.EXPECTATION_FAILED);
         }
     }
 

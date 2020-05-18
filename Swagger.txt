@@ -35,7 +35,7 @@ paths:
       summary: "User login"
       tags: 
         - "LoginController"
-      description: "Enables a user to login"
+      description: "Enables a user to login who is already registered in this application with username and passwrd"
       requestBody:
         required: true
         content:
@@ -44,7 +44,7 @@ paths:
               $ref: '#/components/schemas/LoginCredentials'
       responses:
         '200':
-          description: "successful operation.Return a user"
+          description: "successful operation.Returns a user object with userid and without username and password"
           content:
             application/json:
               schema:
@@ -171,15 +171,15 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
         default:
           description: "Unexpected error"
-  /readings/weekreadings:
+  /readings/allReadings:
     get:
-      summary: "return readings of today"
+      summary: "Return all readings"
       tags: 
         - "ReadingController"
-      description: "Api to return readings of today"
+      description: "Api to return all readings of the user"
       parameters:
         - name: "userId"
-          in: header
+          in: query
           required: true
           description: "The ID of the user whose readings need to be retrieved."
           schema:
@@ -187,7 +187,7 @@ paths:
             minimum: 1
       responses:
         '200':
-          description: "Return last week readings of the given user"
+          description: "Return all readings of the given user"
           content:
             application/json:
               schema:

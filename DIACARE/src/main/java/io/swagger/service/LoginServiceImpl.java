@@ -38,7 +38,7 @@ public class LoginServiceImpl implements LoginService {
             loggedInUser.setContactNumber(user.getContactNumber());
             loggedInUser.setEmail(user.getEmail());
         }else{
-            throw new Exception("User not exists");
+            return null;
         }
         return loggedInUser;
     }

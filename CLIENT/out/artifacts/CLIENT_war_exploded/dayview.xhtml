@@ -6,7 +6,8 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
 <h:head>
-    <title>Title</title>
+    <title>Reading</title>
+    <link rel="icon" href="http://example.com/favicon.png"/>
     <!--    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />-->
     <!--    <link rel="stylesheet" href="css/app.css"/>-->
     <link rel="stylesheet" href="css/dayview.css"/>
@@ -14,227 +15,232 @@
 <h:body>
 
 
-    <div id = "tab">
-        <h:form id = "logoutForm">
-            <p:commandLink id="logout" actionListener="#{readingView.logout}" value="Logout"
-                           style="margin-right:20px; float: right;">
-            </p:commandLink>
-        </h:form>
+    <div id = "tab" style="width:70%; margin: auto;">
+        <div style="display:flex; amargin: auto;flex-direction: row; align-items: center;">
+            <p  style="font-size: 20px;float: left; width:100%;">Add reading</p>
+            <h:form id = "logoutForm" style="margin-right:20px; float: right; width:100%;">
+                <p:commandLink id="logout" actionListener="#{readingView.logout}" value="Logout"
+                               style="margin-right:20px; float: right;">
+                </p:commandLink>
+            </h:form>
+        </div>
+
+        <div style="margin: auto; width:50%;">
+            <h:form>
+                <!--        <p:fieldset legend="Today's Reading" toggleable="true" toggleSpeed="500" >-->
+
+                <table class="pnlDayView">
+                    <tr class="center">
+                        <td colspan="3" >
+
+                            <h:outputText value = "Today's Reading"/>
+
+                        </td>
+                    </tr>
+                    <tr class="center" >
+                        <td >
+                            <h:outputLabel value = "#{readingView.date}" />
+                        </td>
+                        <td>
+                            <h:outputLabel value = "#{readingView.day}" />
+                        </td>
+                        <td>
+                            <h:outputLabel value = "Time" />
+                        </td>
+                    </tr>
+                    <tr  >
+                        <td class="rowcolorgreen">
+                            <h:outputLabel value = "Insuline B4 Bed" />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.insulinBeforeBed}"/>
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.insulinBeforeBedTime}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorgreen">
+                            <h:outputLabel value = "Sugar at Fast" />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.sugarAtFast}" />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.sugarAtFastTime}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorblue">
+                            <h:outputLabel value = "Insuine B4 Breakfast" />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.mrngInsulinBeforeFood}"  />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.mrngInsulinBeforeFoodTime}"  />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorblue">
+                            <h:outputLabel value = "Insuine Aft Breakfast" />
+                        </td>
+                        <td>
+                            <h:inputText  value="#{readingView.mrngInsulinAfterFood}"  />
+                        </td>
+                        <td>
+                            <h:inputText  value="#{readingView.mrngInsulinAfterFoodTime}"  />
+                        </td>
+                    </tr>
+                    <tr  >
+                        <td class="rowcolorblue">
+                            <h:outputLabel value = "Place" />
+                        </td>
+                        <td colspan="2">
+                            <h:inputText value="#{readingView.mrngPlace}"   />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorblue">
+                            <h:outputLabel value = "Sugar B4 Breakfast"  />
+                        </td>
+                        <td>
+                            <h:inputText  value="#{readingView.mrngSugarBeforeFood}"  />
+                        </td>
+                        <td>
+                            <h:inputText  value="#{readingView.mrngSugarBeforeFoodTime}"  />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorblue">
+                            <h:outputLabel value = "Sugar Aft Breakfast	" />
+                        </td>
+                        <td>
+                            <h:inputText  value="#{readingView.mrngSugarAfterFood}"  />
+                        </td>
+                        <td>
+                            <h:inputText  value="#{readingView.mrngSugarAfterFoodTime}"  />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorpeach">
+                            <h:outputLabel value = "Insuine B4 Lunch" />
+                        </td>
+                        <td>
+                            <h:inputText  value="#{readingView.noonInsulinBeforeFood}"  />
+                        </td>
+                        <td>
+                            <h:inputText  value="#{readingView.noonInsulinBeforeFoodTime}"  />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorpeach">
+                            <h:outputLabel value = "Insuine Aft Lunch" />
+                        </td>
+                        <td>
+                            <h:inputText  value="#{readingView.noonInsulinAfterFood}"  />
+                        </td>
+                        <td>
+                            <h:inputText  value="#{readingView.noonInsulinAfterFoodTime}"  />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorpeach">
+                            <h:outputLabel value = "Place" />
+                        </td>
+                        <td colspan="2">
+                            <h:inputText value="#{readingView.noonPlace}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorpeach">
+                            <h:outputLabel value = "Sugar B4 Lunch"  />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.noonSugarBeforeFood}"  />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.noonSugarBeforeFoodTime}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorpeach">
+                            <h:outputLabel value = "Sugar Aft Lunch" />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.noonSugarAfterFood}" />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.noonSugarAfterFoodTime}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorgray">
+                            <h:outputLabel value = "Insuine B4 Dinner" />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.evngInsulinBeforeFood}" />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.evngInsulinBeforeFoodTime}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorgray">
+                            <h:outputLabel value = "Insuine Aft Dinner" />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.evngInsulinAfterFood}" />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.evngInsulinAfterFoodTime}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorgray">
+                            <h:outputLabel value = "Place" />
+                        </td>
+                        <td colspan="2">
+                            <h:inputText value="#{readingView.evngPlace}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorgray">
+                            <h:outputLabel value = "Sugar B4 Dinner"  />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.evngSugarBeforeFood}" />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.evngSugarBeforeFoodTime}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorgray">
+                            <h:outputLabel value = "Sugar Aft Dinner" />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.evngSugarAfterFood}" />
+                        </td>
+                        <td>
+                            <h:inputText value="#{readingView.evngSugarAfterFoodTime}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rowcolorgray">
+                            <h:outputLabel value = "Comment" />
+                        </td>
+                        <td colspan="2">
+                            <h:inputText value="#{readingView.comment}" />
+                        </td>
+                    </tr>
+                </table>
+                <p:commandButton value="Back to home" action="home.xhtml?faces-redirect=true" />
+                <p:commandButton value = "#{readingView.isSave ? 'Save' : 'Update'}" action="#{readingView.saveReading}" >
+                </p:commandButton>
+            </h:form>
+        </div>
     </div>
-
-    <h:form>
-        <!--        <p:fieldset legend="Today's Reading" toggleable="true" toggleSpeed="500" >-->
-
-        <table class="pnlDayView">
-            <tr class="center">
-                <td colspan="3" >
-
-                    <h:outputText value = "Today's Reading"/>
-
-                </td>
-            </tr>
-            <tr class="center" >
-                <td >
-                    <h:outputLabel value = "#{readingView.date}" />
-                </td>
-                <td>
-                    <h:outputLabel value = "#{readingView.day}" />
-                </td>
-                <td>
-                    <h:outputLabel value = "Time" />
-                </td>
-            </tr>
-            <tr  >
-                <td class="rowcolorgreen">
-                    <h:outputLabel value = "Insuline B4 Bed" />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.insulinBeforeBed}"/>
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.insulinBeforeBedTime}" />
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorgreen">
-                    <h:outputLabel value = "Sugar at Fast" />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.sugarAtFast}" />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.sugarAtFastTime}" />
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorblue">
-                    <h:outputLabel value = "Insuine B4 Breakfast" />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.mrngInsulinBeforeFood}"  />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.mrngInsulinBeforeFoodTime}"  />
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorblue">
-                    <h:outputLabel value = "Insuine Aft Breakfast" />
-                </td>
-                <td>
-                    <h:inputText  value="#{readingView.mrngInsulinAfterFood}"  />
-                </td>
-                <td>
-                    <h:inputText  value="#{readingView.mrngInsulinAfterFoodTime}"  />
-                </td>
-            </tr>
-            <tr  >
-                <td class="rowcolorblue">
-                    <h:outputLabel value = "Place" />
-                </td>
-                <td colspan="2">
-                    <h:inputText value="#{readingView.mrngPlace}"   />
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorblue">
-                    <h:outputLabel value = "Sugar B4 Breakfast"  />
-                </td>
-                <td>
-                    <h:inputText  value="#{readingView.mrngSugarBeforeFood}"  />
-                </td>
-                <td>
-                    <h:inputText  value="#{readingView.mrngSugarBeforeFoodTime}"  />
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorblue">
-                    <h:outputLabel value = "Sugar Aft Breakfast	" />
-                </td>
-                <td>
-                    <h:inputText  value="#{readingView.mrngSugarAfterFood}"  />
-                </td>
-                <td>
-                    <h:inputText  value="#{readingView.mrngSugarAfterFoodTime}"  />
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorpeach">
-                    <h:outputLabel value = "Insuine B4 Lunch" />
-                </td>
-                <td>
-                    <h:inputText  value="#{readingView.noonInsulinBeforeFood}"  />
-                </td>
-                <td>
-                    <h:inputText  value="#{readingView.noonInsulinBeforeFoodTime}"  />
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorpeach">
-                    <h:outputLabel value = "Insuine Aft Lunch" />
-                </td>
-                <td>
-                    <h:inputText  value="#{readingView.noonInsulinAfterFood}"  />
-                </td>
-                <td>
-                    <h:inputText  value="#{readingView.noonInsulinAfterFoodTime}"  />
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorpeach">
-                    <h:outputLabel value = "Place" />
-                </td>
-                <td colspan="2">
-                    <h:inputText value="#{readingView.noonPlace}" />
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorpeach">
-                    <h:outputLabel value = "Sugar B4 Lunch"  />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.noonSugarBeforeFood}"  />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.noonSugarBeforeFoodTime}" />
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorpeach">
-                    <h:outputLabel value = "Sugar Aft Lunch" />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.noonSugarAfterFood}" />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.noonSugarAfterFoodTime}" />
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorgray">
-                    <h:outputLabel value = "Insuine B4 Dinner" />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.evngInsulinBeforeFood}" />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.evngInsulinBeforeFoodTime}"/>
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorgray">
-                    <h:outputLabel value = "Insuine Aft Dinner" />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.evngInsulinAfterFood}" />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.evngInsulinAfterFoodTime}" />
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorgray">
-                    <h:outputLabel value = "Place" />
-                </td>
-                <td colspan="2">
-                    <h:inputText value="#{readingView.evngPlace}" />
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorgray">
-                    <h:outputLabel value = "Sugar B4 Dinner"  />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.evngSugarBeforeFood}" />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.evngSugarBeforeFoodTime}" />
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorgray">
-                    <h:outputLabel value = "Sugar Aft Dinner" />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.evngSugarAfterFood}" />
-                </td>
-                <td>
-                    <h:inputText value="#{readingView.evngSugarAfterFoodTime}" />
-                </td>
-            </tr>
-            <tr>
-                <td class="rowcolorgray">
-                    <h:outputLabel value = "Comment" />
-                </td>
-                <td colspan="2">
-                    <h:inputText value="#{readingView.comment}" />
-                </td>
-            </tr>
-        </table>
-        <p:commandButton value="Back to home" action="home.xhtml?faces-redirect=true" />
-        <p:commandButton value = "#{readingView.isSave ? 'Save' : 'Update'}" action="#{readingView.saveReading}" >
-        </p:commandButton>
-    </h:form>
 
 </h:body>
 </html>

@@ -31,7 +31,7 @@ public class DataDisplayView implements Serializable {
 
     @PostConstruct
     public void init() {
-        username = "Hello "+Utilities.getUsername();
+        username = "Hello "+Utilities.getUsername()+"..!";
         Integer userId = Utilities.getUserId();
         if(userId == null)
         {

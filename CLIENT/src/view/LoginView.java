@@ -51,11 +51,9 @@ public class LoginView implements Serializable {
         LoginCredentials loginCredentials = new LoginCredentials();
         loginCredentials.setUsername(this.getUsername());
         loginCredentials.setPassword(this.getPassword());
-
         Client client = ClientBuilder.newClient();
         WebTarget clientTraget = client.target("http://localhost:8080").path("login");
         ObjectMapper mapper = new ObjectMapper();
-        //Converting the Object to JSONString
         String jsonString = null;
         try {
             jsonString = mapper.writeValueAsString(loginCredentials);

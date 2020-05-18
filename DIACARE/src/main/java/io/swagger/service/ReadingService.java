@@ -10,11 +10,11 @@ public interface ReadingService {
 
     public ReadingDetails saveReading(ReadingDetailsDto readingDetailsDto);
 
-    public List<ReadingDetailsDto> findReadingsOflastWeek(Integer userId);
-
     public ReadingDetails findByReadingId(Integer readingId);
 
     ReadingDetails updateReading(ReadingDetailsDto body);
 
     ReadingDetailsDto findTodaysReading(Integer userId);
+
+    public List<ReadingDetailsDto> findAllReadings(Integer userId);
 }

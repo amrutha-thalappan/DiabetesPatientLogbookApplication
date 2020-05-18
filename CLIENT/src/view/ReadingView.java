@@ -3,13 +3,9 @@ package view;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dto.ReadingDetailsDto;
-import org.primefaces.context.RequestContext;
-import service.ReadingService;
 import util.Utilities;
 
 import javax.annotation.PostConstruct;
-import javax.faces.application.ConfigurableNavigationHandler;
-import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
@@ -67,21 +63,11 @@ public class ReadingView implements Serializable {
 
     private static Boolean isSave;
 
-    @ManagedProperty(value="#{readingService}")
-    private ReadingService service;
-
-    public void setService(ReadingService service) {
-        this.service = service;
-    }
-
     @PostConstruct
     public void init() {
 
         if(Utilities.getUserId() == null)
         {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN,
-                    "Invalid Login!",
-                    "Please Login!"));
             String  page = "http://localhost:8082/CLIENT_war_exploded/index.xhtml";
             try {
                 FacesContext.getCurrentInstance().getExternalContext().redirect(page);
@@ -498,11 +484,6 @@ public class ReadingView implements Serializable {
 
     public void setIsSave(Boolean isSave) {
         this.isSave = isSave;
-    }
-
-
-    public ReadingService getService() {
-        return service;
     }
 
     public void saveReading(){

@@ -2,6 +2,7 @@ package io.swagger.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.ApiParam;
+import io.swagger.model.ErrorResponse;
 import io.swagger.model.LoggedInUser;
 import io.swagger.model.LoginCredentials;
 import io.swagger.service.LoginService;
@@ -36,21 +37,18 @@ public class LoginApiController implements LoginApi {
         this.request = request;
     }
 
-    public ResponseEntity<LoggedInUser> loginPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody LoginCredentials body
-) {
+    public ResponseEntity<?> loginPost(@ApiParam(value = "" ,required=true )
+                                                  @Valid @RequestBody LoginCredentials body) {
         LoggedInUser loggedInUser = null;
-        String accept = request.getHeader("Accept");
-        if (accept != null && accept.contains("application/json")) {
-            try {
-                loggedInUser = loginService.verifyUser(body);
-                return new ResponseEntity<LoggedInUser>(loggedInUser, HttpStatus.OK);
-            } catch (Exception e) {
-                log.error("Couldn't serialize response for content type application/json", e);
-                return new ResponseEntity<LoggedInUser>(HttpStatus.INTERNAL_SERVER_ERROR);
-            }
+        try {
+            loggedInUser = loginService.verifyUser(body);
+            return new ResponseEntity<>(loggedInUser, HttpStatus.OK);
+        } catch (Exception e) {
+            log.error("Couldn't serialize response for content type application/json", e);
+            return new ResponseEntity<>(new ErrorResponse(
+                    417, "Cannot find User "+e.getMessage()),
+                    HttpStatus.EXPECTATION_FAILED);
         }
-
-        return new ResponseEntity<LoggedInUser>(HttpStatus.NOT_IMPLEMENTED);
     }
 
 }

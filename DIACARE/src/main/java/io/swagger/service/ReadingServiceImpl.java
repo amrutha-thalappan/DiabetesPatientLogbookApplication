@@ -27,38 +27,6 @@ public class ReadingServiceImpl implements ReadingService {
     }
 
     @Override
-    public List<ReadingDetailsDto> findReadingsOflastWeek(Integer userId) {
-        User user =  userService.findByUserId(userId);
-        List<ReadingDetails> readingDetailsList = null;
-        Date now = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        String strDate= formatter.format(now);
-        try {
-            now = formatter.parse(strDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        Calendar oneWeekAgo = Calendar.getInstance();
-        oneWeekAgo.setTime(now);
-        oneWeekAgo.add(Calendar.DAY_OF_MONTH, -7);
-        Date dateOneWeekAgo = oneWeekAgo.getTime();
-        String strOneWeekAgo= formatter.format(dateOneWeekAgo);
-        try {
-            dateOneWeekAgo = formatter.parse(strOneWeekAgo);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        readingDetailsList = readingDetailsRepository.findByUserIdAndDateGreaterThanEqualAndDateLessThanEqual(userId, now, dateOneWeekAgo);
-        List<ReadingDetailsDto> readingDetailsDtos = new ArrayList<>();
-        for(ReadingDetails reading : readingDetailsList){
-            ReadingDetailsDto readingDetailsDto = mapObjectToDto(reading);
-            readingDetailsDtos.add(readingDetailsDto);
-        }
-
-        return readingDetailsDtos;
-    }
-
-    @Override
     public ReadingDetails findByReadingId(Integer readingId) {
         Optional<ReadingDetails> readingDetails = readingDetailsRepository.findById(readingId);
         ReadingDetails details = null;
@@ -102,6 +70,18 @@ public class ReadingServiceImpl implements ReadingService {
         ReadingDetailsDto readingDetailsDto = mapObjectToDto(readingDetails);
 
         return readingDetailsDto;
+    }
+
+    @Override
+    public List<ReadingDetailsDto> findAllReadings(Integer userId) {
+        User user =  userService.findByUserId(userId);
+        List<ReadingDetails> readingDetailsList = readingDetailsRepository.findByUserOrderByDateDesc(user);
+        List<ReadingDetailsDto> readingDetailsDtos = new ArrayList<>();
+        for(ReadingDetails reading : readingDetailsList){
+            ReadingDetailsDto readingDetailsDto = mapObjectToDto(reading);
+            readingDetailsDtos.add(readingDetailsDto);
+        }
+        return readingDetailsDtos;
     }
 
     private ReadingDetails updateDetailsIfNotNull(ReadingDetails existingReadingDetails, ReadingDetailsDto dto) {

@@ -18,6 +18,8 @@ import javax.ws.rs.core.Response;
 import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @ManagedBean(name="dataListService")
@@ -28,7 +30,7 @@ public class DataListService implements Serializable {
 
 
         Client client = ClientBuilder.newClient();
-        WebTarget target = client.target("http://localhost:8080/readings/weekreadings")
+        WebTarget target = client.target("http://localhost:8080/readings/allReadings")
                 .queryParam("userId", userId);
         Invocation.Builder invocationBuilder = target.request();
         Response response = invocationBuilder.get();

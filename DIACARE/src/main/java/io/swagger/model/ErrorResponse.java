@@ -21,6 +21,11 @@ public class ErrorResponse   {
   @JsonProperty("message")
   private String message = null;
 
+  public ErrorResponse(Integer statuscode, String message) {
+    this.statuscode = statuscode;
+    this.message = message;
+  }
+
   public ErrorResponse statuscode(Integer statuscode) {
     this.statuscode = statuscode;
     return this;

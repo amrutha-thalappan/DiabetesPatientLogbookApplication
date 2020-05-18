@@ -2,6 +2,7 @@ package io.swagger.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.ApiParam;
+import io.swagger.model.ErrorResponse;
 import io.swagger.model.User;
 import io.swagger.model.UserDto;
 import io.swagger.service.UserService;
@@ -10,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,17 +38,11 @@ public class UsersApiController implements UsersApi {
         this.objectMapper = objectMapper;
         this.request = request;
     }
-/*
-    public ResponseEntity<Void> usersChangePasswordPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody ChangePasswordDto body
-) {
-        String accept = request.getHeader("Accept");
-        return new ResponseEntity<Void>(HttpStatus.NOT_IMPLEMENTED);
-    }*/
 
-    public ResponseEntity<User> usersPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody UserDto body
-) {
+    public ResponseEntity<?> usersPost(@ApiParam(value = "" ,required=true )
+                                       @Valid @RequestBody UserDto body) {
         User savedUser = userService.saveUser(body);
-        return new ResponseEntity<User>(savedUser, HttpStatus.OK);
+        return new ResponseEntity<>(savedUser, HttpStatus.OK);
     }
 
 }

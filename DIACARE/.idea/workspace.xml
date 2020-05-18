@@ -19,7 +19,481 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eff6132-7802-4d57-a412-fd41c6d8de57" name="Default Changelist" comment="" />
+    <list default="true" id="9eff6132-7802-4d57-a412-fd41c6d8de57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../ProjectSubmission_AmruthaNairTHALAPPAN_PratikPARIKH.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../WS Submission.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/artifacts/CLIENT_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/libraries/Java_EE_6_Java_EE_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/libraries/Mojarra_2_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/libraries/PrimeFaces_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/libraries/com_fasterxml_jackson_core_jackson_databind_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/libraries/javax_enterprise_cdi_api_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/libraries/javax_faces_javax_faces_api_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/libraries/javax_ws_rs_javax_ws_rs_api_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/libraries/org_glassfish_jersey_core_jersey_client_2_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/libraries/org_glassfish_jersey_core_jersey_common_2_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/libraries/org_glassfish_jersey_inject_jersey_hk2_2_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/libraries/org_glassfish_jersey_media_jersey_media_json_jackson_2_30_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/libraries/org_springframework_security_spring_security_test_4_0_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/CLIENT.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/lib/javax.ejb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/lib/javax.faces-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/lib/javax.jms.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/lib/javax.persistence.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/lib/javax.resource.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/lib/javax.servlet.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/lib/javax.servlet.jsp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/lib/javax.servlet.jsp.jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/lib/javax.transaction.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/lib/primefaces-6.1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/lib/primefaces-6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/bootstrap/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/bootstrap/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/bootstrap/css/bootstrap-docs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/bootstrap/css/prettify.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/bootstrap/js/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/bootstrap/js/google-code-prettify/prettify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/bootstrap/js/holder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/css/dayview.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/css/weekview.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/faces-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/images/diacare/banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/images/diacare/iStock_498359607.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/images/diacare/loginbackground.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/index.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/bootstrap-select.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/bootstrap-switch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/flatui-checkbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/flatui-fileinput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/flatui-radio.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/holder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/html5shiv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/icon-font-ie7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/jquery-1.8.3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/jquery-ui-1.10.3.custom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/jquery.nivo.slider.pack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/jquery.placeholder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/jquery.tagsinput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/jquery.ui.touch-punch.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/over.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/respond.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/js/typeahead.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/scripts/controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/scripts/jquery.1.12.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/secondPage.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/Resources/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/dto/DataListDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/dto/DiabetesDataDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/dto/LoggedInUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/dto/LoginCredentials.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/dto/ReadingDetailsDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/dto/ReadingDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/enumtype/DayTime.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/enumtype/NightChecking.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/enumtype/ReadingType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/enumtype/TimeOfRecording.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/service/DataListService$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/service/DataListService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/service/ReadingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/util/Utilities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/view/DataDisplayView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/view/LoginView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/view/ReadingView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/classes/view/ReadingView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/faces-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/aopalliance-repackaged-2.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/cdi-api-2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/hk2-api-2.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/hk2-locator-2.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/hk2-utils-2.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jackson-annotations-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jackson-annotations-2.7.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jackson-core-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jackson-core-2.7.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jackson-databind-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jackson-databind-2.7.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jackson-module-jaxb-annotations-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jakarta.activation-1.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jakarta.activation-api-1.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jakarta.annotation-api-1.3.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jakarta.inject-2.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jakarta.ws.rs-api-2.1.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jakarta.xml.bind-api-2.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/javassist-3.25.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/javax.el-api-3.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/javax.faces-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/javax.faces-api-2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/javax.inject-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/javax.interceptor-api-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/javax.ws.rs-api-2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jersey-client-2.30.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jersey-common-2.30.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jersey-common-2.30.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jersey-entity-filtering-2.30.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jersey-hk2-2.30.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/jersey-media-json-jackson-2.30.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/osgi-resource-locator-1.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/primefaces-6.1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/primefaces-6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/spring-aop-4.1.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/spring-beans-4.1.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/spring-context-4.1.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/spring-core-4.1.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/spring-expression-4.1.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/spring-security-core-4.0.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/spring-security-test-4.0.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/spring-security-web-4.0.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/spring-test-4.1.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/lib/spring-web-4.1.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/bootstrap/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/bootstrap/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/bootstrap/css/bootstrap-docs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/bootstrap/css/prettify.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/bootstrap/js/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/bootstrap/js/google-code-prettify/prettify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/bootstrap/js/holder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/css/dayview.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/css/weekview.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/dayview.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/home.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/images/diacare/banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/images/diacare/iStock_498359607.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/images/diacare/loginbackground.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/index.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/bootstrap-select.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/bootstrap-switch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/flatui-checkbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/flatui-fileinput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/flatui-radio.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/holder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/html5shiv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/icon-font-ie7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/jquery-1.8.3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/jquery-ui-1.10.3.custom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/jquery.nivo.slider.pack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/jquery.placeholder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/jquery.tagsinput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/jquery.ui.touch-punch.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/over.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/respond.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/js/typeahead.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/registration.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/scripts/controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/artifacts/CLIENT_war_exploded/scripts/jquery.1.12.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/dto/DataListDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/dto/DiabetesDataDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/dto/LoggedInUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/dto/LoginCredentials.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/dto/ReadingDetailsDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/dto/ReadingDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/enumtype/DayTime.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/enumtype/NightChecking.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/enumtype/ReadingType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/enumtype/TimeOfRecording.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/service/DataListService$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/service/DataListService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/service/ReadingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/util/Utilities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/view/DataDisplayView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/view/LoginView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/view/ReadingView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/out/production/CLIENT/view/ReadingView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/dto/DataListDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/dto/DiabetesDataDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/dto/LoggedInUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/dto/LoginCredentials.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/dto/ReadingDetailsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/dto/ReadingDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/enumtype/DayTime.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/enumtype/NightChecking.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/enumtype/ReadingType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/enumtype/TimeOfRecording.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/service/DataListService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/service/ReadingService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/util/Utilities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/view/DataDisplayView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/view/LoginView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/src/view/ReadingView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/WEB-INF/faces-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/WEB-INF/lib/javax.faces-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/WEB-INF/lib/primefaces-6.1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/WEB-INF/lib/primefaces-6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/dayview.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/home.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/index.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/registration.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/bootstrap/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/bootstrap/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/bootstrap/css/bootstrap-docs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/bootstrap/css/prettify.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/bootstrap/js/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/bootstrap/js/google-code-prettify/prettify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/bootstrap/js/holder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/css/dayview.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/css/weekview.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/images/diacare/banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/images/diacare/iStock_498359607.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/images/diacare/loginbackground.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/bootstrap-select.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/bootstrap-switch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/flatui-checkbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/flatui-fileinput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/flatui-radio.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/holder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/html5shiv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/icon-font-ie7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/jquery-1.8.3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/jquery-ui-1.10.3.custom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/jquery.nivo.slider.pack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/jquery.placeholder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/jquery.tagsinput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/jquery.ui.touch-punch.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/over.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/respond.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/js/typeahead.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/scripts/controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CLIENT/web/resources/scripts/jquery.1.12.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__com_github_joschi_jackson_jackson_datatype_threetenbp_2_6_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__com_microsoft_sqlserver_mssql_jdbc_6_2_2_jre8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_7_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_7_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_34.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_34.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_34.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_assertj_assertj_core_3_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_17_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_2_17_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_2_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_12_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_javassist_javassist_3_22_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_mockito_mockito_core_2_15_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_primefaces_primefaces_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_0_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_spring_aop_5_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_spring_aspects_5_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_spring_beans_5_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_spring_context_5_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_spring_core_5_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_spring_expression_5_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_spring_orm_5_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_spring_test_5_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_spring_tx_5_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_spring_web_5_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_threeten_threetenbp_1_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.swagger-codegen-ignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/.swagger-codegen/VERSION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/Swagger.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/RFC3339DateFormat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/Swagger2SpringBoot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/api/ApiException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/api/ApiOriginFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/api/ApiResponseMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/api/LoginApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/api/LoginApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/api/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/api/ReadingsApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/api/ReadingsApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/api/UsersApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/api/UsersApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/configuration/CustomInstantDeserializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/configuration/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/configuration/JacksonConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/configuration/MyConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/configuration/SwaggerDocumentationConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/model/DataListDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/model/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/model/LoggedInUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/model/LoginCredentials.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/model/LoginDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/model/ReadingDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/model/ReadingDetailsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/model/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/model/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/repository/LoginRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/repository/ReadingDetailsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/service/LoginService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/service/LoginServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/service/ReadingService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/service/ReadingServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/java/io/swagger/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/src/main/webapp/welcomePrimefaces.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/swagger-spring.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/META-INF/swagger-spring.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/RFC3339DateFormat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/Swagger2SpringBoot$ExitException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/Swagger2SpringBoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/api/ApiException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/api/ApiOriginFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/api/ApiResponseMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/api/LoginApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/api/LoginApiController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/api/NotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/api/ReadingsApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/api/ReadingsApiController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/api/UsersApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/api/UsersApiController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/CustomInstantDeserializer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/CustomInstantDeserializer$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/CustomInstantDeserializer$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/CustomInstantDeserializer$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/CustomInstantDeserializer$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/CustomInstantDeserializer$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/CustomInstantDeserializer$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/CustomInstantDeserializer$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/CustomInstantDeserializer$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/CustomInstantDeserializer$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/CustomInstantDeserializer$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/CustomInstantDeserializer$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/CustomInstantDeserializer$FromDecimalArguments.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/CustomInstantDeserializer$FromIntegerArguments.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/CustomInstantDeserializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/JacksonConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/MyConfiguration$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/MyConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/configuration/SwaggerDocumentationConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/model/DataListDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/model/ErrorResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/model/LoggedInUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/model/LoginCredentials.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/model/LoginDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/model/ReadingDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/model/ReadingDetailsDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/model/Response.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/model/UserDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/repository/LoginRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/repository/ReadingDetailsRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/service/LoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/service/LoginServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/service/ReadingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/service/ReadingServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DIACARE/target/classes/io/swagger/service/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Swagger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Swagger.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +512,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1ZRiS312zYwOR7ZsBHCMEpXdz0x" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -56,11 +530,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../21-03-2020/SpringSecurityOauth2_AmruthaNairTHALAPPAN/authorization_server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -166,7 +640,10 @@
       <workItem from="1589389175017" duration="5610000" />
       <workItem from="1589534726575" duration="1075000" />
       <workItem from="1589554308842" duration="5672000" />
-      <workItem from="1589620106120" duration="9125000" />
+      <workItem from="1589620106120" duration="14168000" />
+      <workItem from="1589725344184" duration="12795000" />
+      <workItem from="1589790076323" duration="20688000" />
+      <workItem from="1589827365027" duration="1714000" />
     </task>
     <servers />
   </component>
@@ -197,10 +674,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="7" width="1092" height="721" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586858394282" />
-    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1589148467736">
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1589816009673">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1589148467736" />
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1589816009673" />
     <state x="367" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586813418825">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -209,78 +686,82 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1589621072476" />
-    <state width="701" height="466" key="DebuggerActiveHint" timestamp="1589560684451">
+    <state width="701" height="466" key="DebuggerActiveHint" timestamp="1589822536632">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="701" height="466" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1589560684451" />
-    <state x="-135" y="20" width="1182" height="545" key="DiffContextDialog" timestamp="1586770548575">
+    <state width="701" height="466" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1589822536632" />
+    <state x="-135" y="20" width="1182" height="545" key="DiffContextDialog" timestamp="1589748062044">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="-135" y="20" width="1182" height="545" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1586770548575" />
-    <state x="463" y="125" key="FileChooserDialogImpl" timestamp="1589648012325">
+    <state x="-135" y="20" width="1182" height="545" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1589748062044" />
+    <state x="463" y="125" key="FileChooserDialogImpl" timestamp="1589791749730">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="125" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589648012325" />
-    <state width="1323" height="174" key="GridCell.Tab.0.bottom" timestamp="1589662738989">
+    <state x="463" y="125" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589791749730" />
+    <state width="1323" height="35" key="GridCell.Tab.0.bottom" timestamp="1589828885826">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589662738989" />
-    <state width="1323" height="174" key="GridCell.Tab.0.center" timestamp="1589662738989">
+    <state width="1323" height="35" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589828885826" />
+    <state width="1323" height="35" key="GridCell.Tab.0.center" timestamp="1589828885826">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589662738989" />
-    <state width="1323" height="174" key="GridCell.Tab.0.left" timestamp="1589662738988">
+    <state width="1323" height="35" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589828885826" />
+    <state width="1323" height="35" key="GridCell.Tab.0.left" timestamp="1589828885826">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589662738988" />
-    <state width="1323" height="174" key="GridCell.Tab.0.right" timestamp="1589662738989">
+    <state width="1323" height="35" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589828885826" />
+    <state width="1323" height="35" key="GridCell.Tab.0.right" timestamp="1589828885826">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589662738989" />
-    <state width="1323" height="174" key="GridCell.Tab.1.bottom" timestamp="1589662738636">
+    <state width="1323" height="35" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589828885826" />
+    <state width="1323" height="136" key="GridCell.Tab.1.bottom" timestamp="1589826647389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="174" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589662738636" />
-    <state width="1323" height="174" key="GridCell.Tab.1.center" timestamp="1589662738635">
+    <state width="1323" height="136" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
+    <state width="1323" height="136" key="GridCell.Tab.1.center" timestamp="1589826647389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="174" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589662738634" />
-    <state width="1323" height="174" key="GridCell.Tab.1.left" timestamp="1589662738634">
+    <state width="1323" height="136" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
+    <state width="1323" height="136" key="GridCell.Tab.1.left" timestamp="1589826647389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="174" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589662738634" />
-    <state width="1323" height="174" key="GridCell.Tab.1.right" timestamp="1589662738930">
+    <state width="1323" height="136" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
+    <state width="1323" height="136" key="GridCell.Tab.1.right" timestamp="1589826647389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="174" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589662738930" />
-    <state width="1323" height="174" key="GridCell.Tab.2.bottom" timestamp="1589662738633">
+    <state width="1323" height="136" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
+    <state width="1323" height="136" key="GridCell.Tab.2.bottom" timestamp="1589826647389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="174" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589662738633" />
-    <state width="1323" height="174" key="GridCell.Tab.2.center" timestamp="1589662738633">
+    <state width="1323" height="136" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
+    <state width="1323" height="136" key="GridCell.Tab.2.center" timestamp="1589826647389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="174" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1589662738633" />
-    <state width="1323" height="174" key="GridCell.Tab.2.left" timestamp="1589662738632">
+    <state width="1323" height="136" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
+    <state width="1323" height="136" key="GridCell.Tab.2.left" timestamp="1589826647389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="174" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1589662738632" />
-    <state width="1323" height="174" key="GridCell.Tab.2.right" timestamp="1589662738633">
+    <state width="1323" height="136" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
+    <state width="1323" height="136" key="GridCell.Tab.2.right" timestamp="1589826647389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="174" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1589662738633" />
-    <state x="213" y="22" key="Maven.ArtifactSearchDialog" timestamp="1586799099753">
+    <state width="1323" height="136" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
+    <state x="213" y="22" key="Maven.ArtifactSearchDialog" timestamp="1589666558399">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="213" y="22" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1586799099753" />
-    <state x="186" y="9" key="SettingsEditor" timestamp="1587284732854">
+    <state x="213" y="22" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1589666558399" />
+    <state x="186" y="9" key="SettingsEditor" timestamp="1589747304393">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587284732854" />
+    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589747304393" />
     <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1588530642826">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1588530642826" />
+    <state x="92" y="92" width="1182" height="544" maximized="true" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1589748062044">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" maximized="true" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1589748062044" />
     <state x="391" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1586870326746">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -301,47 +782,41 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1586876107229" />
+    <state x="526" y="121" key="refactoring.ChangeSignatureDialog" timestamp="1589728788880">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="526" y="121" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1589728788880" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1586768790470">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586768790470" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1588198740590">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1589747267681">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1588198740590" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1589747267681" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/io/swagger/api/ReadingsApiController.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/api/ReadingsApiController.java</url>
-          <line>85</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/api/ReadingsApiController.java</url>
-          <line>78</line>
+          <line>49</line>
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/service/ReadingServiceImpl.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="61" />
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/api/ReadingsApiController.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/io/swagger/api/ReadingsApiController.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="62" />
+          <line>60</line>
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/service/ReadingServiceImpl.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="63" />
+          <url>file://$PROJECT_DIR$/src/main/java/io/swagger/api/LoginApiController.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

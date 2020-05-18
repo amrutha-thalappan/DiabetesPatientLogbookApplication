@@ -10,40 +10,21 @@ import io.swagger.model.ErrorResponse;
 import io.swagger.model.User;
 import io.swagger.model.UserDto;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-21T16:30:27.879Z[GMT]")
 @CrossOrigin(origins = "http://localhost:8082", maxAge = 3600)
 @Api(value = "users", description = "the users API")
+@RequestMapping(value = "/users/")
 public interface UsersApi {
-
-   /* @ApiOperation(value = "Change password user", nickname = "usersChangePasswordPut", notes = "Api to update password of the loggedin user", tags={ "UserController", })
-    @ApiResponses(value = {
-        @ApiResponse(code = 200, message = "Password updated"),
-        @ApiResponse(code = 404, message = "Current password mismatch", response = ErrorResponse.class),
-        @ApiResponse(code = 412, message = "Precondition failed. Password mismatch", response = ErrorResponse.class),
-        @ApiResponse(code = 417, message = "Invalid password format", response = ErrorResponse.class) })
-    @RequestMapping(value = "/users/changePassword",
-        produces = { "application/json" },
-        consumes = { "application/json" },
-        method = RequestMethod.PUT)
-    ResponseEntity<Void> usersChangePasswordPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody ChangePasswordDto body
-);
-*/
 
     @ApiOperation(value = "Create a new user", nickname = "usersPost", notes = "Api to return user having given id", tags={ "UserController", })
     @ApiResponses(value = { 
         @ApiResponse(code = 201, message = "Created"),
         @ApiResponse(code = 405, message = "Invalid input", response = ErrorResponse.class) })
-    @RequestMapping(value = "/users/",
-        produces = { "application/json" }, 
-        consumes = { "application/json" },
-        method = RequestMethod.POST)
-    ResponseEntity<User> usersPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody UserDto body
+    @PostMapping
+    ResponseEntity<?> usersPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody UserDto body
 );
 
 }

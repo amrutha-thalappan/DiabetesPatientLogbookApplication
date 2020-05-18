@@ -5,6 +5,7 @@
       xmlns:p="http://primefaces.org/ui">
 <h:head>
     <title>Home</title>
+    <link rel="icon" href="http://example.com/favicon.png"/>
 <!--    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />-->
 <!--    <link rel="stylesheet" href="css/app.css"/>-->
     <link rel="stylesheet" href="css/weekview.css"/>
@@ -12,323 +13,142 @@
 <h:body>
 <!--    <script src="bootstrap/bootstrap.min.js"></script>-->
 <!--    <script src="scripts/controller.js"></script>-->
+    <div id = "tab" style="width:100%; margin: auto;">
+        <div class="loginBanner">
+            <img style="width:100%; height:100%;" src="images/diacare/banner.jpg" />
+        </div>
 
-    <h:outputLabel value = "#{dataDisplayView.username}" />
+        <div style="display:flex; amargin: auto;flex-direction: row; align-items: center;">
+            <h:outputLabel value = "#{dataDisplayView.username}" style="font-size: 35px;float: left; width:100%;"/>
+            <h:form id = "logoutForm" style="margin-right:20px; float: right; width:100%;">
+                <p:commandLink id="logout" actionListener="#{readingView.logout}" value="Logout"
+                               style="margin-right:20px; float: right;">
+                </p:commandLink>
+            </h:form>
+        </div>
+        <div>
+            <p  style="font-size: 20px;">Add reading <a href="http://localhost:8082/CLIENT_war_exploded/dayview.xhtml">here</a>.</p>
+        </div>
+        <div class="pnlDayView" >
+            <p:dataTable var="readingDetailsDto" value="#{dataDisplayView.readingDetailsDtos}" styleClass="font" rows="5" paginator="true"
+                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                         currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+                         rowsPerPageTemplate="5,10,15">>
+            <p:columnGroup type="header"  >
+                    <p:row  >
+    <!--                    <p:column rowspan="2" headerText="Player" />-->
+                        <p:column colspan="2" headerText="Week" styleClass="rowcolorgreen "/>
+                        <p:column colspan="2" headerText="Night"  styleClass="rowcolorgreen"/>
+                        <p:column colspan="5" headerText="Morning"  styleClass="rowcolorblue"/>
+                        <p:column colspan="5" headerText="Noon" styleClass="rowcolorpeach" />
+                        <p:column colspan="5" headerText="Evening" styleClass="rowcolorgray"/>
+                        <p:column colspan="1" headerText="Comment" styleClass="rowcoloryellow"/>
+                    </p:row>
+                    <p:row>
+                        <p:column  headerText="Date"  styleClass="rowcolorgreen" />
+                        <p:column  headerText="Day"  styleClass="rowcolorgreen" />
+                        <p:column  headerText="Insuline B4 Bed" styleClass="rowcolorgreen" />
+                        <p:column  headerText="Sugar at Fast" styleClass="rowcolorgreen" />
 
-    <div id = "tab">
-        <p>Add reading <a href="http://localhost:8082/CLIENT_war_exploded/dayview.xhtml">here</a>.</p>
+                        <p:column  headerText="Insuline B4 Breakfast" styleClass=" rowcolorblue "/>
+                        <p:column  headerText="Insuline Aft Breakfast" styleClass="rowcolorblue "/>
+                        <p:column  headerText="Place" styleClass="rowcolorblue "/>
+                        <p:column  headerText="Sugar B4 Breakfast" styleClass="rowcolorblue "/>
+                        <p:column  headerText="Sugar Aft Breakfast" styleClass="rowcolorblue "/>
 
-        <h:form id = "logoutForm">
-            <p:commandLink id="logout" actionListener="#{dataDisplayView.logout}" value="Logout"
-                           style="margin-right:20px; float: right;">
-            </p:commandLink>
-        </h:form>
-    </div>
+                        <p:column  headerText="Insuline B4 Lunch" styleClass="rowcolorpeach "/>
+                        <p:column  headerText="Insuline Aft Lunch " styleClass="rowcolorpeach "/>
+                        <p:column  headerText="Place" styleClass="rowcolorpeach"/>
+                        <p:column  headerText="Sugar B4 Lunch " styleClass="rowcolorpeach "/>
+                        <p:column  headerText="Sugar Aft Lunch" styleClass="rowcolorpeach "/>
 
+                        <p:column  headerText="Insuline B4 Dinner" styleClass="rowcolorgray "/>
+                        <p:column  headerText="Insuline Aft Dinner" styleClass="rowcolorgray "/>
+                        <p:column  headerText="Place" styleClass="rowcolorgray "/>
+                        <p:column  headerText="Sugar B4 Dinner" styleClass="rowcolorgray "/>
+                        <p:column  headerText="Sugar Aft Dinner" styleClass="rowcolorgray "/>
 
-<!--    <p:dataTable var="readingDetailsDto" value="#{dataDisplayView.readingDetailsDtos}">-->
+                        <p:column  headerText="Comment" styleClass="rowcoloryellow"/>
+                    </p:row>
+                </p:columnGroup>
 
+                <p:column headerText="Date" >
 
-<!--        <p:column>-->
+                    <h:outputText value="#{readingDetailsDto.date}" />
+                </p:column>
 
-<!--    <table class="pnlDayView ">-->
-<!--        <tr class="center borderright borderbottom">-->
-<!--            <td class="borderright borderbottom">-->
-<!--                <h:outputText value = "Week"/>-->
-<!--            </td>-->
-<!--            <td class="borderright borderbottom">-->
-<!--                <h:outputText value = "Night"/>-->
-<!--            </td>-->
-<!--            <td class="borderright borderbottom">-->
-<!--                <h:outputText value = "Morning"/>-->
-<!--            </td>-->
-<!--            <td class="borderright borderbottom">-->
-<!--                <h:outputText value = "Noon"/>-->
-<!--            </td>-->
-<!--            <td class="borderbottom">-->
-<!--                <h:outputText value = "Evening"/>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr class="center" >-->
-<!--            <td class="borderright">-->
-<!--                <table width="100%">-->
-<!--                    <tr class="rowcolorgreen">-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Date" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Day"/>-->
-<!--                        </td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <td>-->
-<!--                            <p:dataTable var="readingDetailsDto" value="#{dataDisplayView.readingDetailsDtos}">-->
-<!--                            <p:column>-->
-<!--                            <h:outputText value="#{readingDetailsDto.date}" />-->
-<!--                            </p:column>-->
-<!--                            </p:dataTable>-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.day}" />-->
-<!--                        </td>-->
-<!--                    </tr>-->
-<!--                </table>-->
-<!--            </td>-->
-<!--            <td class="borderright">-->
-<!--                <table width="100%">-->
-<!--                    <tr class="rowcolorgreen">-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Insuline B4 Bed" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Sugar at Fast" />-->
-<!--                        </td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.insulinBeforeBed}" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.sugarAtFast}" />-->
-<!--                        </td>-->
-<!--                    </tr>-->
-<!--                </table>-->
-<!--            </td>-->
-<!--            <td class="borderright">-->
-<!--                <table width="100%">-->
-<!--                    <tr class="rowcolorblue">-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Insuline B4 Breakfast" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Insuline Aft Breakfast" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Place" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Sugar B4 Breakfast" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Sugar Aft Breakfast" />-->
-<!--                        </td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.mrngInsulinBeforeFood}" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.mrngInsulinAfterFood}" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.mrngPlace}" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.mrngSugarBeforeFood}" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.mrngSugarAfterFood}" />-->
-<!--                        </td>-->
-<!--                    </tr>-->
-<!--                </table>-->
-<!--            </td>-->
-<!--            <td class="borderright">-->
-<!--                <table width="100%">-->
-<!--                    <tr class="rowcolorpeach">-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Insuline B4 Lunch" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Insuline Aft Lunch" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Place" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Sugar B4 Lunch" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Sugar Aft Lunch" />-->
-<!--                        </td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.noonInsulinBeforeFood}" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.noonInsulinAfterFood}" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.noonPlace}" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.noonSugarBeforeFood}" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.noonSugarAfterFood}" />-->
-<!--                        </td>-->
-<!--                    </tr>-->
-<!--                </table>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <table width="100%">-->
-<!--                    <tr class="rowcolorgray">-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Insuline B4 Dinner" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Insuline Aft Dinner" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Place" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Sugar B4 Dinner" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputLabel value = "Sugar Aft Dinner" />-->
-<!--                        </td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.evngInsulinBeforeFood}" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.evngInsulinAfterFood}" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.evngPlace}" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.evngSugarBeforeFood}" />-->
-<!--                        </td>-->
-<!--                        <td>-->
-<!--                            <h:outputText value="#{readingDetailsDto.evngSugarAfterFood}" />-->
-<!--                        </td>-->
-<!--                    </tr>-->
-<!--                </table>-->
-<!--            </td>-->
-<!--        </tr>-->
+                <p:column headerText="Day">
+                    <h:outputText value="#{readingDetailsDto.day}" />
+                </p:column>
 
-<!--    </table>-->
-<!--        </p:column>-->
-<!--    </p:dataTable>-->
-    <div class="pnlDayView" >
-        <p:dataTable var="readingDetailsDto" value="#{dataDisplayView.readingDetailsDtos}" styleClass="font">
-        <p:columnGroup type="header"  >
-                <p:row  >
-<!--                    <p:column rowspan="2" headerText="Player" />-->
-                    <p:column colspan="2" headerText="Week" styleClass="rowcolorgreen "/>
-                    <p:column colspan="2" headerText="Night"  styleClass="rowcolorgreen"/>
-                    <p:column colspan="5" headerText="Morning"  styleClass="rowcolorblue"/>
-                    <p:column colspan="5" headerText="Noon" styleClass="rowcolorpeach" />
-                    <p:column colspan="5" headerText="Evening" styleClass="rowcolorgray"/>
-                    <p:column colspan="1" headerText="Comment" styleClass="rowcoloryellow"/>
-                </p:row>
-                <p:row>
-                    <p:column  headerText="Date"  styleClass="rowcolorgreen" />
-                    <p:column  headerText="Day"  styleClass="rowcolorgreen" />
-                    <p:column  headerText="Insuline B4 Bed" styleClass="rowcolorgreen" />
-                    <p:column  headerText="Sugar at Fast" styleClass="rowcolorgreen" />
+                <p:column headerText="Night: Insulin before bed">
+                    <h:outputText value="#{readingDetailsDto.insulinBeforeBed}" />
+                </p:column>
 
-                    <p:column  headerText="Insuline B4 Breakfast" styleClass=" rowcolorblue "/>
-                    <p:column  headerText="Insuline Aft Breakfast" styleClass="rowcolorblue "/>
-                    <p:column  headerText="Place" styleClass="rowcolorblue "/>
-                    <p:column  headerText="Sugar B4 Breakfast" styleClass="rowcolorblue "/>
-                    <p:column  headerText="Sugar Aft Breakfast" styleClass="rowcolorblue "/>
-
-                    <p:column  headerText="Insuline B4 Lunch" styleClass="rowcolorpeach "/>
-                    <p:column  headerText="Insuline Aft Lunch " styleClass="rowcolorpeach "/>
-                    <p:column  headerText="Place" styleClass="rowcolorpeach"/>
-                    <p:column  headerText="Sugar B4 Lunch " styleClass="rowcolorpeach "/>
-                    <p:column  headerText="Sugar Aft Lunch" styleClass="rowcolorpeach "/>
-
-                    <p:column  headerText="Insuline B4 Dinner" styleClass="rowcolorgray "/>
-                    <p:column  headerText="Insuline Aft Dinner" styleClass="rowcolorgray "/>
-                    <p:column  headerText="Place" styleClass="rowcolorgray "/>
-                    <p:column  headerText="Sugar B4 Dinner" styleClass="rowcolorgray "/>
-                    <p:column  headerText="Sugar Aft Dinner" styleClass="rowcolorgray "/>
-
-                    <p:column  headerText="Comment" styleClass="rowcoloryellow"/>
-                </p:row>
-            </p:columnGroup>
-
-            <p:column headerText="Date" >
-
-                <h:outputText value="#{readingDetailsDto.date}" />
-            </p:column>
-
-            <p:column headerText="Day">
-                <h:outputText value="#{readingDetailsDto.day}" />
-            </p:column>
-
-            <p:column headerText="Night: Insulin before bed">
-                <h:outputText value="#{readingDetailsDto.insulinBeforeBed}" />
-            </p:column>
-
-            <p:column headerText="Night: Sugar at fast">
-                <h:outputText value="#{readingDetailsDto.sugarAtFast}" />
-            </p:column>
+                <p:column headerText="Night: Sugar at fast">
+                    <h:outputText value="#{readingDetailsDto.sugarAtFast}" />
+                </p:column>
 
 
 
-            <p:column headerText="Morning: Insulin before food">
-                <h:outputText value="#{readingDetailsDto.mrngInsulinBeforeFood}" />
-            </p:column>
-            <p:column headerText="Morning: Insulin after food">
-                <h:outputText value="#{readingDetailsDto.mrngInsulinAfterFood}" />
-            </p:column>
-            <p:column headerText="Place">
-                <h:outputText value="#{readingDetailsDto.mrngPlace}" />
-            </p:column>
-            <p:column headerText="Morning: Sugar before food">
-                <h:outputText value="#{readingDetailsDto.mrngSugarBeforeFood}" />
-            </p:column>
-            <p:column headerText="Morning: Sugar after food">
-                <h:outputText value="#{readingDetailsDto.mrngSugarAfterFood}" />
-            </p:column>
+                <p:column headerText="Morning: Insulin before food">
+                    <h:outputText value="#{readingDetailsDto.mrngInsulinBeforeFood}" />
+                </p:column>
+                <p:column headerText="Morning: Insulin after food">
+                    <h:outputText value="#{readingDetailsDto.mrngInsulinAfterFood}" />
+                </p:column>
+                <p:column headerText="Place">
+                    <h:outputText value="#{readingDetailsDto.mrngPlace}" />
+                </p:column>
+                <p:column headerText="Morning: Sugar before food">
+                    <h:outputText value="#{readingDetailsDto.mrngSugarBeforeFood}" />
+                </p:column>
+                <p:column headerText="Morning: Sugar after food">
+                    <h:outputText value="#{readingDetailsDto.mrngSugarAfterFood}" />
+                </p:column>
 
 
-            <p:column headerText="Noon: Insulin before food">
-                <h:outputText value="#{readingDetailsDto.noonInsulinBeforeFood}" />
-            </p:column>
-            <p:column headerText="Noon: Insulin after food">
-                <h:outputText value="#{readingDetailsDto.noonInsulinAfterFood}" />
-            </p:column>
-            <p:column headerText="Place">
-                <h:outputText value="#{readingDetailsDto.noonPlace}" />
-            </p:column>
-            <p:column headerText="Noon: Sugar before food">
-                <h:outputText value="#{readingDetailsDto.noonSugarBeforeFood}" />
-            </p:column>
-            <p:column headerText="Noon: Sugar after food">
-                <h:outputText value="#{readingDetailsDto.noonSugarAfterFood}" />
-            </p:column>
+                <p:column headerText="Noon: Insulin before food">
+                    <h:outputText value="#{readingDetailsDto.noonInsulinBeforeFood}" />
+                </p:column>
+                <p:column headerText="Noon: Insulin after food">
+                    <h:outputText value="#{readingDetailsDto.noonInsulinAfterFood}" />
+                </p:column>
+                <p:column headerText="Place">
+                    <h:outputText value="#{readingDetailsDto.noonPlace}" />
+                </p:column>
+                <p:column headerText="Noon: Sugar before food">
+                    <h:outputText value="#{readingDetailsDto.noonSugarBeforeFood}" />
+                </p:column>
+                <p:column headerText="Noon: Sugar after food">
+                    <h:outputText value="#{readingDetailsDto.noonSugarAfterFood}" />
+                </p:column>
 
 
-            <p:column headerText="Evening: Insulin before food">
-                <h:outputText value="#{readingDetailsDto.evngInsulinBeforeFood}" />
-            </p:column>
-            <p:column headerText="Evening: Insulin after food">
-                <h:outputText value="#{readingDetailsDto.evngInsulinAfterFood}" />
-            </p:column>
-            <p:column headerText="Place">
-                <h:outputText value="#{readingDetailsDto.evngPlace}" />
-            </p:column>
-            <p:column headerText="Evening: Sugar before food">
-                <h:outputText value="#{readingDetailsDto.evngSugarBeforeFood}" />
-            </p:column>
-            <p:column headerText="Evening: Sugar after food">
-                <h:outputText value="#{readingDetailsDto.evngSugarAfterFood}" />
-            </p:column>
+                <p:column headerText="Evening: Insulin before food">
+                    <h:outputText value="#{readingDetailsDto.evngInsulinBeforeFood}" />
+                </p:column>
+                <p:column headerText="Evening: Insulin after food">
+                    <h:outputText value="#{readingDetailsDto.evngInsulinAfterFood}" />
+                </p:column>
+                <p:column headerText="Place">
+                    <h:outputText value="#{readingDetailsDto.evngPlace}" />
+                </p:column>
+                <p:column headerText="Evening: Sugar before food">
+                    <h:outputText value="#{readingDetailsDto.evngSugarBeforeFood}" />
+                </p:column>
+                <p:column headerText="Evening: Sugar after food">
+                    <h:outputText value="#{readingDetailsDto.evngSugarAfterFood}" />
+                </p:column>
 
-            <p:column headerText="Comment">
-                <h:outputText value="#{readingDetailsDto.comment}" />
-            </p:column>
+                <p:column headerText="Comment">
+                    <h:outputText value="#{readingDetailsDto.comment}" />
+                </p:column>
 
 
-        </p:dataTable>
+            </p:dataTable>
 
+        </div>
     </div>
 </h:body>
 </html>

@@ -22,13 +22,13 @@ var userDetails = {
                   window.location.href = "http://localhost:8082/CLIENT_war_exploded/index.xhtml";
               },
               error: function() {
-                  alert('Something went wrong');
+                  alert('Your registration is failed');
               }
    })
    // using the done promise callback
    .done(function (data) {
-       userId = data[0].userId;
-       System.out.println(userId);
+       //userId = data[0].userId;
+       //System.out.println(userId);
        // log data to the console so we can see
        console.log(data);
      // here we will handle errors and validation messages

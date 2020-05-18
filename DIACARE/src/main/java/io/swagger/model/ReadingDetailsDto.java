@@ -1,41 +1,115 @@
 package io.swagger.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.validation.annotation.Validated;
+
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-03-21T16:30:27.879Z[GMT]")
 public class ReadingDetailsDto {
 
+    @JsonProperty("userId")
     private Integer userId;
+
+    @JsonProperty("date")
     private String date;
+
+    @JsonProperty("day")
     private String day;
+
+    @JsonProperty("insulinBeforeBed")
     private Integer insulinBeforeBed;
+
+    @JsonProperty("insulinBeforeBedTime")
     private String insulinBeforeBedTime;
+
+    @JsonProperty("sugarAtFast")
     private Integer sugarAtFast;
+
+    @JsonProperty("sugarAtFastTime")
     private String sugarAtFastTime;
+
+    @JsonProperty("mrngInsulinBeforeFood")
     private Integer mrngInsulinBeforeFood;
+
+    @JsonProperty("mrngInsulinBeforeFoodTime")
     private String mrngInsulinBeforeFoodTime;
+
+    @JsonProperty("mrngInsulinAfterFood")
     private Integer mrngInsulinAfterFood;
+
+    @JsonProperty("mrngInsulinAfterFoodTime")
     private String mrngInsulinAfterFoodTime;
+
+    @JsonProperty("mrngPlace")
     private String mrngPlace;
+
+    @JsonProperty("mrngSugarBeforeFood")
     private Integer mrngSugarBeforeFood;
+
+    @JsonProperty("mrngSugarBeforeFoodTime")
     private String mrngSugarBeforeFoodTime;
+
+    @JsonProperty("mrngSugarAfterFood")
     private Integer mrngSugarAfterFood;
+
+    @JsonProperty("mrngSugarAfterFoodTime")
     private String mrngSugarAfterFoodTime;
+
+    @JsonProperty("noonInsulinBeforeFood")
     private Integer noonInsulinBeforeFood;
+
+    @JsonProperty("noonInsulinBeforeFoodTime")
     private String noonInsulinBeforeFoodTime;
+
+    @JsonProperty("noonInsulinAfterFood")
     private Integer noonInsulinAfterFood;
+
+    @JsonProperty("noonInsulinAfterFoodTime")
     private String noonInsulinAfterFoodTime;
+
+    @JsonProperty("noonPlace")
     private String noonPlace;
+
+    @JsonProperty("noonSugarBeforeFood")
     private Integer noonSugarBeforeFood;
+
+    @JsonProperty("noonSugarBeforeFoodTime")
     private String noonSugarBeforeFoodTime;
+
+    @JsonProperty("noonSugarAfterFood")
     private Integer noonSugarAfterFood;
+
+    @JsonProperty("noonSugarAfterFoodTime")
     private String noonSugarAfterFoodTime;
+
+    @JsonProperty("evngInsulinBeforeFood")
     private Integer evngInsulinBeforeFood;
+
+    @JsonProperty("evngInsulinBeforeFoodTime")
     private String evngInsulinBeforeFoodTime;
+
+    @JsonProperty("evngInsulinAfterFood")
     private Integer evngInsulinAfterFood;
+
+    @JsonProperty("evngInsulinAfterFoodTime")
     private String evngInsulinAfterFoodTime;
+
+    @JsonProperty("evngPlace")
     private String evngPlace;
+
+    @JsonProperty("evngSugarBeforeFood")
     private Integer evngSugarBeforeFood;
+
+    @JsonProperty("evngSugarBeforeFoodTime")
     private String evngSugarBeforeFoodTime;
+
+    @JsonProperty("evngSugarAfterFood")
     private Integer evngSugarAfterFood;
+
+    @JsonProperty("evngSugarAfterFoodTime")
     private String evngSugarAfterFoodTime;
+
+    @JsonProperty("comment")
     private String comment;
 
     public Integer getUserId() {
