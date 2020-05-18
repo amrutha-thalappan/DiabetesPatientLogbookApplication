@@ -20,8 +20,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eff6132-7802-4d57-a412-fd41c6d8de57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../ProjectSubmission_AmruthaNairTHALAPPAN_PratikPARIKH.zip" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../WS Submission.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bootstrap/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bootstrap/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bootstrap/css/bootstrap-docs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bootstrap/css/prettify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bootstrap/js/application.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bootstrap/js/google-code-prettify/prettify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bootstrap/js/holder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/application.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/bootstrap-select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/bootstrap-switch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/flatui-checkbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/flatui-fileinput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/flatui-radio.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/holder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/html5shiv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/icon-font-ie7.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/jquery-1.8.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/jquery-ui-1.10.3.custom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/jquery.nivo.slider.pack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/jquery.placeholder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/jquery.tagsinput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/jquery.ui.touch-punch.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/over.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/respond.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../js/typeahead.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../CLIENT/.idea/.name" beforeDir="false" />
@@ -643,7 +673,7 @@
       <workItem from="1589620106120" duration="14168000" />
       <workItem from="1589725344184" duration="12795000" />
       <workItem from="1589790076323" duration="20688000" />
-      <workItem from="1589827365027" duration="1714000" />
+      <workItem from="1589827365027" duration="2728000" />
     </task>
     <servers />
   </component>
@@ -698,54 +728,54 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="125" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589791749730" />
-    <state width="1323" height="35" key="GridCell.Tab.0.bottom" timestamp="1589828885826">
+    <state width="1323" height="136" key="GridCell.Tab.0.bottom" timestamp="1589833424575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="35" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589828885826" />
-    <state width="1323" height="35" key="GridCell.Tab.0.center" timestamp="1589828885826">
+    <state width="1323" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589833424575" />
+    <state width="1323" height="136" key="GridCell.Tab.0.center" timestamp="1589833424575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="35" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589828885826" />
-    <state width="1323" height="35" key="GridCell.Tab.0.left" timestamp="1589828885826">
+    <state width="1323" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589833424575" />
+    <state width="1323" height="136" key="GridCell.Tab.0.left" timestamp="1589833424575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="35" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589828885826" />
-    <state width="1323" height="35" key="GridCell.Tab.0.right" timestamp="1589828885826">
+    <state width="1323" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589833424575" />
+    <state width="1323" height="136" key="GridCell.Tab.0.right" timestamp="1589833424575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="35" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589828885826" />
-    <state width="1323" height="136" key="GridCell.Tab.1.bottom" timestamp="1589826647389">
+    <state width="1323" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589833424575" />
+    <state width="1323" height="136" key="GridCell.Tab.1.bottom" timestamp="1589833424575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="136" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
-    <state width="1323" height="136" key="GridCell.Tab.1.center" timestamp="1589826647389">
+    <state width="1323" height="136" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589833424575" />
+    <state width="1323" height="136" key="GridCell.Tab.1.center" timestamp="1589833424575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="136" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
-    <state width="1323" height="136" key="GridCell.Tab.1.left" timestamp="1589826647389">
+    <state width="1323" height="136" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589833424575" />
+    <state width="1323" height="136" key="GridCell.Tab.1.left" timestamp="1589833424575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="136" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
-    <state width="1323" height="136" key="GridCell.Tab.1.right" timestamp="1589826647389">
+    <state width="1323" height="136" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589833424575" />
+    <state width="1323" height="136" key="GridCell.Tab.1.right" timestamp="1589833424575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="136" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
-    <state width="1323" height="136" key="GridCell.Tab.2.bottom" timestamp="1589826647389">
+    <state width="1323" height="136" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589833424575" />
+    <state width="1323" height="136" key="GridCell.Tab.2.bottom" timestamp="1589833424575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="136" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
-    <state width="1323" height="136" key="GridCell.Tab.2.center" timestamp="1589826647389">
+    <state width="1323" height="136" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589833424575" />
+    <state width="1323" height="136" key="GridCell.Tab.2.center" timestamp="1589833424575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="136" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
-    <state width="1323" height="136" key="GridCell.Tab.2.left" timestamp="1589826647389">
+    <state width="1323" height="136" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1589833424575" />
+    <state width="1323" height="136" key="GridCell.Tab.2.left" timestamp="1589833424575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="136" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
-    <state width="1323" height="136" key="GridCell.Tab.2.right" timestamp="1589826647389">
+    <state width="1323" height="136" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1589833424575" />
+    <state width="1323" height="136" key="GridCell.Tab.2.right" timestamp="1589833424575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="136" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1589826647389" />
+    <state width="1323" height="136" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1589833424575" />
     <state x="213" y="22" key="Maven.ArtifactSearchDialog" timestamp="1589666558399">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
